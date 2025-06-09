@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --background: hsl(45, 36%, 96%);
+  --foreground: hsl(100, 25%, 19%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(45, 36%, 96%);
+  --popover-foreground: hsl(100, 25%, 19%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(100, 25%, 19%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(92, 58%, 20%);
+  --primary-foreground: hsl(45, 36%, 96%);
+  --secondary: hsl(25, 42%, 27%);
+  --secondary-foreground: hsl(45, 36%, 96%);
+  --accent: hsl(51, 85%, 38%);
+  --accent-foreground: hsl(92, 58%, 20%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(100, 25%, 19%);
+  --radius: 0.5rem;
+  
+  /* Custom colors */
+  --forest-green: hsl(92, 58%, 20%);
+  --earth-brown: hsl(25, 42%, 27%);
+  --golden-amber: hsl(51, 85%, 38%);
+  --warm-beige: hsl(45, 36%, 96%);
+  --dark-olive: hsl(100, 25%, 19%);
+  --warm-tan: hsl(33, 56%, 53%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(92, 58%, 20%);
+  --primary-foreground: hsl(45, 36%, 96%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-lora {
+    font-family: 'Lora', serif;
+  }
+  
+  .font-opensans {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .bg-forest-green {
+    background-color: var(--forest-green);
+  }
+  
+  .text-forest-green {
+    color: var(--forest-green);
+  }
+  
+  .bg-earth-brown {
+    background-color: var(--earth-brown);
+  }
+  
+  .text-earth-brown {
+    color: var(--earth-brown);
+  }
+  
+  .bg-golden-amber {
+    background-color: var(--golden-amber);
+  }
+  
+  .text-golden-amber {
+    color: var(--golden-amber);
+  }
+  
+  .bg-warm-beige {
+    background-color: var(--warm-beige);
+  }
+  
+  .text-warm-beige {
+    color: var(--warm-beige);
+  }
+  
+  .bg-dark-olive {
+    background-color: var(--dark-olive);
+  }
+  
+  .text-dark-olive {
+    color: var(--dark-olive);
+  }
+  
+  .bg-warm-tan {
+    background-color: var(--warm-tan);
+  }
+  
+  .text-warm-tan {
+    color: var(--warm-tan);
+  }
+
+  .border-forest-green {
+    border-color: var(--forest-green);
+  }
+  
+  .border-warm-tan {
+    border-color: var(--warm-tan);
+  }
+
+  .hover\:bg-earth-brown:hover {
+    background-color: var(--earth-brown);
+  }
+  
+  .hover\:bg-warm-tan:hover {
+    background-color: var(--warm-tan);
+  }
+  
+  .hover\:text-forest-green:hover {
+    color: var(--forest-green);
+  }
+  
+  .hover\:text-golden-amber:hover {
+    color: var(--golden-amber);
+  }
+
+  .focus\:border-forest-green:focus {
+    border-color: var(--forest-green);
+  }
+
+  .organic-shape {
+    clip-path: polygon(0% 0%, 100% 0%, 95% 85%, 5% 100%);
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .hero-overlay {
+    background: linear-gradient(135deg, hsl(92, 58%, 20%, 0.7) 0%, hsl(25, 42%, 27%, 0.5) 100%);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  
+  .testimonial-card {
+    background: linear-gradient(145deg, var(--warm-beige) 0%, hsl(45, 26%, 94%) 100%);
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+}
