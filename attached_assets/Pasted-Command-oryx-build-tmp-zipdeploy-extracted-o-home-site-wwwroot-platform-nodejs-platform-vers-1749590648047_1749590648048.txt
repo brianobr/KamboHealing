@@ -1,0 +1,65 @@
+Command: oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 20 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8dda85e2bbf6280 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log
+Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
+You can report issues at https://github.com/Microsoft/Oryx/issues
+
+Oryx Version: 0.2.20250522.1+cada9e85564f034d18420f8b5b38b3cf2259f321, Commit: cada9e85564f034d18420f8b5b38b3cf2259f321, ReleaseTagName: 20250522.1
+
+Build Operation ID: 70e1e245a8697866
+Repository Commit : d229d08b-39f1-4edd-8190-c0f5a26b7ce8
+OS Type           : bookworm
+Image Type        : githubactions
+
+Primary SDK Storage URL: https://oryx-cdn.microsoft.io
+Backup SDK Storage URL: https://oryxsdks-cdn.azureedge.net
+Detecting platforms...
+Detected following platforms:
+  nodejs: 20.19.1
+Version '20.19.1' of platform 'nodejs' is not installed. Generating script to install it...
+Detected the following frameworks: Typescript,Express,React
+
+Using intermediate directory '/tmp/8dda85e2bbf6280'.
+
+Copying files to the intermediate directory...
+Done in 1 sec(s).
+
+Source directory     : /tmp/8dda85e2bbf6280
+Destination directory: /home/site/wwwroot
+
+
+Downloading and extracting 'nodejs' version '20.19.1' to '/tmp/oryx/platforms/nodejs/20.19.1'...
+Detected image debian flavor: bookworm.
+Downloaded in 8 sec(s).
+Verifying checksum...
+Extracting contents...
+performing sha512 checksum for: nodejs...
+Done in 17 sec(s).
+
+Removing existing manifest file
+Creating directory for command manifest file if it does not exist
+Creating a manifest file...
+Node Build Command Manifest file created.
+
+Using Node version:
+v20.19.1
+
+Using Npm version:
+10.8.2
+
+Running 'npm install'...
+
+
+added 372 packages, and audited 373 packages in 59s
+
+52 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+Running 'npm run build'...
+
+
+> rest-express@1.0.0 build
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+
+sh: 1: vite: not found
+sh: 1: vite: not found\n/bin/bash -c "oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 20 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8dda85e2bbf6280 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS "

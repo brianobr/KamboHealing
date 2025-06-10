@@ -14,23 +14,26 @@ fi
 echo "Node.js version: $(node --version)"
 echo "NPM version: $(npm --version)"
 
-# Install root dependencies
+# Install root dependencies (production only)
 echo "Installing root dependencies..."
 npm ci --production
 
-# Install client dependencies
+# Install client dependencies (all deps for build)
 if [ -d "client" ]; then
     echo "Installing client dependencies..."
     cd client
     npm ci
+    echo "Building Vite frontend..."
+    npm run build
     cd ..
+    
+    # Ensure dist/public directory exists and copy client build
+    echo "Copying client build to dist/public..."
+    mkdir -p dist/public
+    cp -r client/dist/* dist/public/
+else
+    echo "Warning: client directory not found"
 fi
-
-# Build Vite frontend
-echo "Building Vite frontend..."
-cd client
-npm run build
-cd ..
 
 # Build Express backend
 echo "Building Express backend..."
@@ -38,7 +41,12 @@ npx esbuild server/index.ts --platform=node --packages=external --bundle --forma
 
 echo "Linux deployment completed successfully!"
 
-# Set executable permissions for PM2 or direct node execution
+# Verify build outputs
+echo "Build verification:"
+echo "- Server bundle: $(ls -la dist/index.js 2>/dev/null || echo 'MISSING')"
+echo "- Client files: $(ls -la dist/public/index.html 2>/dev/null || echo 'MISSING')"
+
+# Set executable permissions
 chmod +x dist/index.js 2>/dev/null || true
 
 echo "Application ready to start with: node dist/index.js"
