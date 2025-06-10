@@ -24,11 +24,11 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center text-white">
-      {/* Dense Amazon rainforest canopy with mystical lighting */}
+      {/* Amazon rainforest canopy with morning mist */}
       <div 
         className="absolute inset-0 bg-cover bg-center" 
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
+          backgroundImage: "url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
         }}
       />
       <div className="absolute inset-0 hero-overlay" />

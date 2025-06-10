@@ -15,10 +15,10 @@ export default function KamboInfo() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div className="fade-in">
-            {/* Phyllomedusa bicolor frog in natural rainforest habitat */}
+            {/* Green tree frog representing Phyllomedusa bicolor in natural habitat */}
             <img 
-              src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Phyllomedusa bicolor frog in Amazon rainforest" 
+              src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+              alt="Giant green tree frog on leaf - representing Phyllomedusa bicolor" 
               className="rounded-xl shadow-lg w-full h-auto"
             />
           </div>
