@@ -15,10 +15,10 @@ export default function KamboInfo() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div className="fade-in">
-            {/* Green tree frog representing Phyllomedusa bicolor in natural habitat */}
+            {/* Phyllomedusa bicolor - Giant Monkey Frog in Amazon rainforest */}
             <img 
-              src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Giant green tree frog on leaf - representing Phyllomedusa bicolor" 
+              src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+              alt="Phyllomedusa bicolor Giant Monkey Frog in Amazon rainforest setting" 
               className="rounded-xl shadow-lg w-full h-auto"
             />
           </div>
@@ -44,6 +44,43 @@ export default function KamboInfo() {
               <div className="flex items-start">
                 <Leaf className="text-golden-amber mr-3 mt-1 h-5 w-5" />
                 <span><strong>Natural Detox:</strong> Supports the body's natural cleansing processes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Ceremonial elements section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div className="fade-in">
+            {/* Traditional Kambo ceremony setup with ceremonial elements */}
+            <img 
+              src="https://images.unsplash.com/photo-1544966503-7e10ad807d97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+              alt="Traditional ceremonial setup in Amazon rainforest" 
+              className="rounded-xl shadow-lg w-full h-auto"
+            />
+          </div>
+          <div className="fade-in">
+            <h3 className="font-lora text-2xl font-semibold text-forest-green mb-4">
+              Sacred Ceremony & Tradition
+            </h3>
+            <p className="text-dark-olive mb-4">
+              Kambo ceremonies are conducted with deep respect for indigenous Amazonian traditions. The sacred space is prepared with intention, incorporating elements from the rainforest where this medicine originates.
+            </p>
+            <p className="text-dark-olive mb-6">
+              The Giant Monkey Frog secretes its medicine as a natural defense mechanism. Indigenous tribes have developed respectful harvesting methods that don't harm the frogs, maintaining the sacred relationship between humans and this powerful ally.
+            </p>
+            <div className="space-y-3">
+              <div className="flex items-start">
+                <Leaf className="text-golden-amber mr-3 mt-1 h-5 w-5" />
+                <span><strong>Indigenous Wisdom:</strong> Ceremonies honor traditional Matsés and Katukina practices</span>
+              </div>
+              <div className="flex items-start">
+                <Shield className="text-golden-amber mr-3 mt-1 h-5 w-5" />
+                <span><strong>Ethical Sourcing:</strong> Frogs are treated with reverence and released unharmed</span>
+              </div>
+              <div className="flex items-start">
+                <Dna className="text-golden-amber mr-3 mt-1 h-5 w-5" />
+                <span><strong>Sacred Space:</strong> Ceremonies create a container for profound healing</span>
               </div>
             </div>
           </div>
