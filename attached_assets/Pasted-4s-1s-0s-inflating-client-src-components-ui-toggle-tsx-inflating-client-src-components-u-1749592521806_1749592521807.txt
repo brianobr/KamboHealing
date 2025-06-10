@@ -1,0 +1,90 @@
+4s
+1s
+0s
+  inflating: client/src/components/ui/toggle.tsx  
+  inflating: client/src/components/ui/checkbox.tsx  
+  inflating: client/src/components/ui/form.tsx  
+  inflating: client/src/components/ui/alert-dialog.tsx  
+  inflating: client/src/components/ui/badge.tsx  
+  inflating: client/src/components/ui/scroll-area.tsx  
+  inflating: client/src/components/ui/avatar.tsx  
+  inflating: client/src/components/ui/table.tsx  
+  inflating: client/src/components/ui/hover-card.tsx  
+  inflating: client/src/components/ui/separator.tsx  
+  inflating: client/src/components/ui/navigation-menu.tsx  
+  inflating: client/src/components/ui/breadcrumb.tsx  
+  inflating: client/src/components/ui/dropdown-menu.tsx  
+  inflating: client/src/components/ui/alert.tsx  
+  inflating: client/src/components/ui/switch.tsx  
+  inflating: client/src/components/ui/menubar.tsx  
+  inflating: client/src/components/ui/command.tsx  
+  inflating: client/src/components/ui/collapsible.tsx  
+  inflating: client/src/components/ui/toast.tsx  
+  inflating: client/src/components/ui/sidebar.tsx  
+  inflating: client/src/components/ui/chart.tsx  
+  inflating: client/src/components/ui/input-otp.tsx  
+  inflating: client/src/components/ui/pagination.tsx  
+  inflating: client/src/components/ui/drawer.tsx  
+  inflating: client/src/components/ui/accordion.tsx  
+  inflating: client/src/components/ui/select.tsx  
+  inflating: client/src/components/ui/input.tsx  
+  inflating: client/src/components/ui/resizable.tsx  
+  inflating: client/src/components/ui/tooltip.tsx  
+  inflating: client/src/components/ui/card.tsx  
+  inflating: client/src/components/ui/button.tsx  
+  inflating: client/src/components/ui/tabs.tsx  
+  inflating: client/src/components/ui/aspect-ratio.tsx  
+  inflating: client/src/components/ui/calendar.tsx  
+  inflating: client/src/components/Contact.tsx  
+  inflating: client/src/components/FAQ.tsx  
+  inflating: client/src/components/Footer.tsx  
+  inflating: client/src/components/Navigation.tsx  
+  inflating: client/src/components/Testimonials.tsx  
+  inflating: client/src/components/Hero.tsx  
+  inflating: client/src/components/About.tsx  
+  inflating: client/src/components/KamboInfo.tsx  
+   creating: client/src/pages/
+  inflating: client/src/pages/home.tsx  
+  inflating: client/src/pages/not-found.tsx  
+   creating: client/src/hooks/
+  inflating: client/src/hooks/use-mobile.tsx  
+  inflating: client/src/hooks/use-toast.ts  
+  inflating: client/src/main.tsx     
+  inflating: client/tailwind.config.ts  
+  inflating: client/index.html       
+  inflating: components.json         
+  inflating: deploy.sh               
+  inflating: drizzle.config.ts       
+  inflating: package-lock.json       
+  inflating: package.json            
+  inflating: package.json.azure      
+  inflating: postcss.config.js       
+   creating: server/
+  inflating: server/storage.ts       
+  inflating: server/index.ts         
+  inflating: server/vite.ts          
+  inflating: server/routes.ts        
+   creating: shared/
+  inflating: shared/schema.ts        
+  inflating: startup.sh              
+  inflating: staticwebapp.config.json  
+  inflating: tailwind.config.ts      
+  inflating: tsconfig.json           
+  inflating: vite.config.ts          
+  inflating: web.config              
+5s
+Run azure/login@v2
+Running Azure CLI Login.
+/usr/bin/az cloud set -n azurecloud
+Done setting cloud: "azurecloud"
+Federated token details:
+ issuer - https://token.actions.githubusercontent.com
+ subject claim - repo:brianobr/KamboHealing:environment:Production
+ audience - api://AzureADTokenExchange
+ job_workflow_ref - brianobr/KamboHealing/.github/workflows/main_app-kambohealing.yml@refs/heads/main
+Attempting Azure CLI login by using OIDC...
+Subscription is set successfully.
+Azure CLI login succeeds by using OIDC.
+4m 47s
+Run azure/webapps-deploy@v3
+Package deployment using OneDeploy initiated.
