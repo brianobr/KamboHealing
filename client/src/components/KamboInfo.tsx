@@ -15,10 +15,10 @@ export default function KamboInfo() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div className="fade-in">
-            {/* Phyllomedusa bicolor - Giant Monkey Frog in Amazon rainforest */}
+            {/* Giant Waxy Monkey Frog (Phyllomedusa bicolor) - the source of Kambo medicine */}
             <img 
-              src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Phyllomedusa bicolor Giant Monkey Frog in Amazon rainforest setting" 
+              src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Giant_Waxy_Monkey_Frog.jpg" 
+              alt="Giant Waxy Monkey Frog (Phyllomedusa bicolor) - source of Kambo medicine" 
               className="rounded-xl shadow-lg w-full h-auto"
             />
           </div>
@@ -52,10 +52,10 @@ export default function KamboInfo() {
         {/* Ceremonial elements section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div className="fade-in">
-            {/* Traditional Kambo ceremony setup with ceremonial elements */}
+            {/* Giant Monkey Frog in ceremonial setting */}
             <img 
-              src="https://images.unsplash.com/photo-1544966503-7e10ad807d97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Traditional ceremonial setup in Amazon rainforest" 
+              src="@assets/Firefly Photorealistic giant monkey leaf frog in an Amazonion Kambo ceremony 91141_1749575444807.jpg" 
+              alt="Giant Monkey Frog in traditional Kambo ceremony setting" 
               className="rounded-xl shadow-lg w-full h-auto"
             />
           </div>
