@@ -1,4 +1,5 @@
 import { CheckCircle } from "lucide-react";
+import mattHeadshot from "@assets/Matt Headshot-Enhanced_1749577277724.png";
 
 export default function About() {
   return (
@@ -8,7 +9,7 @@ export default function About() {
           <div className="fade-in">
             {/* Matt O'Brien - Professional headshot */}
             <img 
-              src="@assets/Matt Headshot-Enhanced_1749577277724.png" 
+              src={mattHeadshot} 
               alt="Matt O'Brien - Certified Kambo Practitioner" 
               className="rounded-2xl shadow-2xl w-full h-auto"
             />
