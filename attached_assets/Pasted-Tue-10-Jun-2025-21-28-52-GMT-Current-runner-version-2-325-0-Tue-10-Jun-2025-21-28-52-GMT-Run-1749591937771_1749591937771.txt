@@ -1,0 +1,206 @@
+Tue, 10 Jun 2025 21:28:52 GMT
+Current runner version: '2.325.0'
+Tue, 10 Jun 2025 21:28:52 GMT
+Runner Image Provisioner
+Tue, 10 Jun 2025 21:28:52 GMT
+Operating System
+Tue, 10 Jun 2025 21:28:52 GMT
+Runner Image
+Tue, 10 Jun 2025 21:28:52 GMT
+GITHUB_TOKEN Permissions
+Tue, 10 Jun 2025 21:28:52 GMT
+Secret source: Actions
+Tue, 10 Jun 2025 21:28:52 GMT
+Prepare workflow directory
+Tue, 10 Jun 2025 21:28:52 GMT
+Prepare all required actions
+Tue, 10 Jun 2025 21:28:52 GMT
+Getting action download info
+Tue, 10 Jun 2025 21:28:52 GMT
+Download immutable action package 'actions/download-artifact@v4'
+Tue, 10 Jun 2025 21:28:53 GMT
+Download action repository 'azure/login@v2' (SHA:a457da9ea143d694b1b9c7c869ebb04ebe844ef5)
+Tue, 10 Jun 2025 21:28:54 GMT
+Download action repository 'azure/webapps-deploy@v3' (SHA:2fdd5c3ebb4e540834e86ecc1f6fdcd5539023ee)
+Tue, 10 Jun 2025 21:28:57 GMT
+Complete job name: deploy
+1s
+0s
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/checkbox.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/form.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/alert-dialog.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/badge.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/scroll-area.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/avatar.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/table.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/hover-card.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/separator.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/navigation-menu.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/breadcrumb.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/dropdown-menu.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/alert.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/switch.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/menubar.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/command.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/collapsible.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/toast.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/sidebar.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/chart.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/input-otp.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/pagination.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/drawer.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/accordion.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/select.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/input.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/resizable.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/tooltip.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/card.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/button.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/tabs.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/aspect-ratio.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/ui/calendar.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/Contact.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/FAQ.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/Footer.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/Navigation.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/Testimonials.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/Hero.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/About.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/components/KamboInfo.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+   creating: client/src/pages/
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/pages/home.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/pages/not-found.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+   creating: client/src/hooks/
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/hooks/use-mobile.tsx  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/hooks/use-toast.ts  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/src/main.tsx     
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/tailwind.config.ts  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: client/index.html       
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: components.json         
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: deploy.sh               
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: drizzle.config.ts       
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: package-lock.json       
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: package.json            
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: package.json.azure      
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: postcss.config.js       
+Tue, 10 Jun 2025 21:28:58 GMT
+   creating: server/
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: server/storage.ts       
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: server/index.ts         
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: server/vite.ts          
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: server/routes.ts        
+Tue, 10 Jun 2025 21:28:58 GMT
+   creating: shared/
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: shared/schema.ts        
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: startup.sh              
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: staticwebapp.config.json  
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: tailwind.config.ts      
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: tsconfig.json           
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: vite.config.ts          
+Tue, 10 Jun 2025 21:28:58 GMT
+  inflating: web.config              
+29s
+Tue, 10 Jun 2025 21:28:58 GMT
+Run azure/login@v2
+Tue, 10 Jun 2025 21:28:58 GMT
+Running Azure CLI Login.
+Tue, 10 Jun 2025 21:29:25 GMT
+/usr/bin/az cloud set -n azurecloud
+Tue, 10 Jun 2025 21:29:26 GMT
+Done setting cloud: "azurecloud"
+Tue, 10 Jun 2025 21:29:26 GMT
+Federated token details:
+Tue, 10 Jun 2025 21:29:26 GMT
+ issuer - https://token.actions.githubusercontent.com
+Tue, 10 Jun 2025 21:29:26 GMT
+ subject claim - repo:brianobr/KamboHealing:environment:Production
+Tue, 10 Jun 2025 21:29:26 GMT
+ audience - api://AzureADTokenExchange
+Tue, 10 Jun 2025 21:29:26 GMT
+ job_workflow_ref - brianobr/KamboHealing/.github/workflows/main_app-kambohealing.yml@refs/heads/main
+Tue, 10 Jun 2025 21:29:26 GMT
+Attempting Azure CLI login by using OIDC...
+Tue, 10 Jun 2025 21:29:27 GMT
+Subscription is set successfully.
+Tue, 10 Jun 2025 21:29:27 GMT
+Azure CLI login succeeds by using OIDC.
+14m 58s
+Tue, 10 Jun 2025 21:29:27 GMT
+Run azure/webapps-deploy@v3
+Tue, 10 Jun 2025 21:29:27 GMT
+  with:
+Tue, 10 Jun 2025 21:29:27 GMT
+    app-name: app-kamboHealing
+Tue, 10 Jun 2025 21:29:27 GMT
+    slot-name: Production
+Tue, 10 Jun 2025 21:29:27 GMT
+    package: .
+Tue, 10 Jun 2025 21:29:32 GMT
+Package deployment using OneDeploy initiated.
