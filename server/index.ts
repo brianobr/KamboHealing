@@ -58,9 +58,10 @@ app.use((req, res, next) => {
 
   // Use Azure's PORT environment variable or fallback to 5000 for local dev
   const port = parseInt(process.env.PORT || "5000", 10);
+  const host = process.env.NODE_ENV === "production" ? "0.0.0.0" : "localhost";
   
-  server.listen(port, () => {
-    log(`serving on port ${port}`);
+  server.listen(port, host, () => {
+    log(`serving on ${host}:${port}`);
   }).on('error', (err) => {
     console.error('Server failed to start:', err);
     process.exit(1);

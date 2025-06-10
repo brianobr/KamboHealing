@@ -31,13 +31,17 @@ if [ -d "client" ]; then
     echo "Copying client build to dist/public..."
     mkdir -p dist/public
     cp -r client/dist/* dist/public/
+    
+    # Also copy to the location the server expects in production
+    mkdir -p public
+    cp -r client/dist/* public/
 else
     echo "Warning: client directory not found"
 fi
 
 # Build Express backend
 echo "Building Express backend..."
-npx esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+npx esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --minify
 
 echo "Linux deployment completed successfully!"
 
