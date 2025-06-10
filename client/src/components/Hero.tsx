@@ -24,11 +24,11 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center text-white">
-      {/* Amazon rainforest with focus on medicinal plants and indigenous wisdom */}
+      {/* Dense Amazon rainforest canopy with mystical lighting */}
       <div 
         className="absolute inset-0 bg-cover bg-center" 
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1600298881974-6be191ceeda1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
+          backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
         }}
       />
       <div className="absolute inset-0 hero-overlay" />
