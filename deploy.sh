@@ -22,7 +22,15 @@ npm ci --production
 if [ -d "client" ]; then
     echo "Installing client dependencies..."
     cd client
-    npm ci
+    
+    # Use npm install if no package-lock.json exists, otherwise use npm ci
+    if [ -f "package-lock.json" ]; then
+        npm ci
+    else
+        echo "No package-lock.json found, using npm install..."
+        npm install
+    fi
+    
     echo "Building Vite frontend..."
     npm run build
     cd ..

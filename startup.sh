@@ -6,7 +6,7 @@ echo "Starting Kambo website application..."
 # Set environment variables for production
 export NODE_ENV=production
 
-# Default PORT if not set by Azure
+# Default PORT if not set by Azure (Azure typically uses 8080)
 export PORT=${PORT:-8080}
 
 # Debug: Show environment

@@ -1,0 +1,35 @@
+﻿2025-06-10T22:04:23.1062123Z ##[group]Run cd client
+2025-06-10T22:04:23.1062432Z [36;1mcd client[0m
+2025-06-10T22:04:23.1062648Z [36;1mnpm ci[0m
+2025-06-10T22:04:23.1062847Z [36;1mnpm run build[0m
+2025-06-10T22:04:23.1063072Z [36;1mcd ..[0m
+2025-06-10T22:04:23.1063842Z [36;1mnpx esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist[0m
+2025-06-10T22:04:23.1064410Z [36;1mmkdir -p dist/public[0m
+2025-06-10T22:04:23.1064687Z [36;1mcp -r client/dist/* dist/public/[0m
+2025-06-10T22:04:23.1116265Z shell: /usr/bin/bash -e {0}
+2025-06-10T22:04:23.1116565Z ##[endgroup]
+2025-06-10T22:04:23.6325515Z npm error code EUSAGE
+2025-06-10T22:04:23.6354274Z npm error
+2025-06-10T22:04:23.6355447Z npm error The `npm ci` command can only install with an existing package-lock.json or
+2025-06-10T22:04:23.6356652Z npm error npm-shrinkwrap.json with lockfileVersion >= 1. Run an install with npm@5 or
+2025-06-10T22:04:23.6357752Z npm error later to generate a package-lock.json file, then try again.
+2025-06-10T22:04:23.6358504Z npm error
+2025-06-10T22:04:23.6358945Z npm error Clean install a project
+2025-06-10T22:04:23.6359427Z npm error
+2025-06-10T22:04:23.6359762Z npm error Usage:
+2025-06-10T22:04:23.6360145Z npm error npm ci
+2025-06-10T22:04:23.6360505Z npm error
+2025-06-10T22:04:23.6360864Z npm error Options:
+2025-06-10T22:04:23.6361667Z npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+2025-06-10T22:04:23.6362786Z npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+2025-06-10T22:04:23.6364163Z npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+2025-06-10T22:04:23.6365301Z npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+2025-06-10T22:04:23.6366168Z npm error [--no-bin-links] [--no-fund] [--dry-run]
+2025-06-10T22:04:23.6367117Z npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+2025-06-10T22:04:23.6368109Z npm error [-ws|--workspaces] [--include-workspace-root] [--install-links]
+2025-06-10T22:04:23.6368751Z npm error
+2025-06-10T22:04:23.6369373Z npm error aliases: clean-install, ic, install-clean, isntall-clean
+2025-06-10T22:04:23.6369961Z npm error
+2025-06-10T22:04:23.6370452Z npm error Run "npm help ci" for more info
+2025-06-10T22:04:23.6384652Z npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2025-06-10T22_04_23_212Z-debug-0.log
+2025-06-10T22:04:23.6515479Z ##[error]Process completed with exit code 1.

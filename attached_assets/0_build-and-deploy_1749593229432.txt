@@ -1,0 +1,184 @@
+﻿2025-06-10T22:04:05.4504406Z Current runner version: '2.325.0'
+2025-06-10T22:04:05.4538911Z ##[group]Runner Image Provisioner
+2025-06-10T22:04:05.4540248Z Hosted Compute Agent
+2025-06-10T22:04:05.4541343Z Version: 20250529.345
+2025-06-10T22:04:05.4542357Z Commit: 22237e57af968c281070ffa8ed912c1b754f9a23
+2025-06-10T22:04:05.4543784Z Build Date: 2025-05-29T20:18:30Z
+2025-06-10T22:04:05.4545002Z ##[endgroup]
+2025-06-10T22:04:05.4545918Z ##[group]Operating System
+2025-06-10T22:04:05.4546894Z Ubuntu
+2025-06-10T22:04:05.4547808Z 24.04.2
+2025-06-10T22:04:05.4548632Z LTS
+2025-06-10T22:04:05.4549429Z ##[endgroup]
+2025-06-10T22:04:05.4550514Z ##[group]Runner Image
+2025-06-10T22:04:05.4551404Z Image: ubuntu-24.04
+2025-06-10T22:04:05.4552248Z Version: 20250602.3.0
+2025-06-10T22:04:05.4554510Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250602.3/images/ubuntu/Ubuntu2404-Readme.md
+2025-06-10T22:04:05.4557325Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250602.3
+2025-06-10T22:04:05.4559277Z ##[endgroup]
+2025-06-10T22:04:05.4561187Z ##[group]GITHUB_TOKEN Permissions
+2025-06-10T22:04:05.4564813Z Contents: read
+2025-06-10T22:04:05.4565706Z Metadata: read
+2025-06-10T22:04:05.4566594Z Packages: read
+2025-06-10T22:04:05.4567429Z ##[endgroup]
+2025-06-10T22:04:05.4570478Z Secret source: Actions
+2025-06-10T22:04:05.4572044Z Prepare workflow directory
+2025-06-10T22:04:05.5237972Z Prepare all required actions
+2025-06-10T22:04:05.5295038Z Getting action download info
+2025-06-10T22:04:06.0952407Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-06-10T22:04:06.0953699Z Version: 4.2.2
+2025-06-10T22:04:06.0954706Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-06-10T22:04:06.0956009Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-06-10T22:04:06.0956788Z ##[endgroup]
+2025-06-10T22:04:06.1793020Z ##[group]Download immutable action package 'actions/setup-node@v3'
+2025-06-10T22:04:06.1794155Z Version: 3.9.1
+2025-06-10T22:04:06.1795036Z Digest: sha256:d8c8dbd6e63927801f9de42620f961a361b03be6034dcc11e83ca01f50cb9f40
+2025-06-10T22:04:06.1796141Z Source commit SHA: 3235b876344d2a9aa001b8d1453c930bba69e610
+2025-06-10T22:04:06.1796812Z ##[endgroup]
+2025-06-10T22:04:06.7228929Z Download action repository 'azure/login@v2' (SHA:a457da9ea143d694b1b9c7c869ebb04ebe844ef5)
+2025-06-10T22:04:07.1641786Z Download action repository 'azure/webapps-deploy@v3' (SHA:2fdd5c3ebb4e540834e86ecc1f6fdcd5539023ee)
+2025-06-10T22:04:10.0400875Z Complete job name: build-and-deploy
+2025-06-10T22:04:10.1029252Z ##[group]Run actions/checkout@v4
+2025-06-10T22:04:10.1029890Z with:
+2025-06-10T22:04:10.1030154Z   repository: brianobr/KamboHealing
+2025-06-10T22:04:10.1030635Z   token: ***
+2025-06-10T22:04:10.1030874Z   ssh-strict: true
+2025-06-10T22:04:10.1031111Z   ssh-user: git
+2025-06-10T22:04:10.1031355Z   persist-credentials: true
+2025-06-10T22:04:10.1031611Z   clean: true
+2025-06-10T22:04:10.1031853Z   sparse-checkout-cone-mode: true
+2025-06-10T22:04:10.1032143Z   fetch-depth: 1
+2025-06-10T22:04:10.1032410Z   fetch-tags: false
+2025-06-10T22:04:10.1032653Z   show-progress: true
+2025-06-10T22:04:10.1032910Z   lfs: false
+2025-06-10T22:04:10.1033125Z   submodules: false
+2025-06-10T22:04:10.1033526Z   set-safe-directory: true
+2025-06-10T22:04:10.1034045Z ##[endgroup]
+2025-06-10T22:04:10.2205713Z Syncing repository: brianobr/KamboHealing
+2025-06-10T22:04:10.2207793Z ##[group]Getting Git version info
+2025-06-10T22:04:10.2208560Z Working directory is '/home/runner/work/KamboHealing/KamboHealing'
+2025-06-10T22:04:10.2209611Z [command]/usr/bin/git version
+2025-06-10T22:04:10.2260377Z git version 2.49.0
+2025-06-10T22:04:10.2291312Z ##[endgroup]
+2025-06-10T22:04:10.2305610Z Temporarily overriding HOME='/home/runner/work/_temp/2c1a876b-a5fa-49d5-ba42-842a6bc5b175' before making global git config changes
+2025-06-10T22:04:10.2309154Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-10T22:04:10.2323208Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/KamboHealing/KamboHealing
+2025-06-10T22:04:10.2362328Z Deleting the contents of '/home/runner/work/KamboHealing/KamboHealing'
+2025-06-10T22:04:10.2369980Z ##[group]Initializing the repository
+2025-06-10T22:04:10.2376748Z [command]/usr/bin/git init /home/runner/work/KamboHealing/KamboHealing
+2025-06-10T22:04:10.2458169Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-10T22:04:10.2459208Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-10T22:04:10.2460095Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-10T22:04:10.2460742Z hint:
+2025-06-10T22:04:10.2461269Z hint: 	git config --global init.defaultBranch <name>
+2025-06-10T22:04:10.2461846Z hint:
+2025-06-10T22:04:10.2462422Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-10T22:04:10.2463160Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-10T22:04:10.2463916Z hint:
+2025-06-10T22:04:10.2464191Z hint: 	git branch -m <name>
+2025-06-10T22:04:10.2474611Z Initialized empty Git repository in /home/runner/work/KamboHealing/KamboHealing/.git/
+2025-06-10T22:04:10.2485291Z [command]/usr/bin/git remote add origin https://github.com/brianobr/KamboHealing
+2025-06-10T22:04:10.2519850Z ##[endgroup]
+2025-06-10T22:04:10.2522889Z ##[group]Disabling automatic garbage collection
+2025-06-10T22:04:10.2527353Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-10T22:04:10.2560092Z ##[endgroup]
+2025-06-10T22:04:10.2561443Z ##[group]Setting up auth
+2025-06-10T22:04:10.2568774Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-10T22:04:10.2601934Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-10T22:04:10.2921518Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-10T22:04:10.2954618Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-10T22:04:10.3185922Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-10T22:04:10.3223764Z ##[endgroup]
+2025-06-10T22:04:10.3225327Z ##[group]Fetching the repository
+2025-06-10T22:04:10.3232893Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +70f53c9a1ae37999e7ee09e5e4f56b74916d1e0f:refs/remotes/origin/main
+2025-06-10T22:04:11.4564848Z From https://github.com/brianobr/KamboHealing
+2025-06-10T22:04:11.4565688Z  * [new ref]         70f53c9a1ae37999e7ee09e5e4f56b74916d1e0f -> origin/main
+2025-06-10T22:04:11.4594048Z ##[endgroup]
+2025-06-10T22:04:11.4604444Z ##[group]Determining the checkout info
+2025-06-10T22:04:11.4606131Z ##[endgroup]
+2025-06-10T22:04:11.4611176Z [command]/usr/bin/git sparse-checkout disable
+2025-06-10T22:04:11.4682253Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-06-10T22:04:11.4735090Z ##[group]Checking out the ref
+2025-06-10T22:04:11.4738320Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-06-10T22:04:11.5209413Z Switched to a new branch 'main'
+2025-06-10T22:04:11.5226265Z branch 'main' set up to track 'origin/main'.
+2025-06-10T22:04:11.5243973Z ##[endgroup]
+2025-06-10T22:04:11.5303832Z [command]/usr/bin/git log -1 --format=%H
+2025-06-10T22:04:11.5330701Z 70f53c9a1ae37999e7ee09e5e4f56b74916d1e0f
+2025-06-10T22:04:11.5601397Z ##[group]Run actions/setup-node@v3
+2025-06-10T22:04:11.5601675Z with:
+2025-06-10T22:04:11.5601854Z   node-version: 20.x
+2025-06-10T22:04:11.5602043Z   cache: npm
+2025-06-10T22:04:11.5602221Z   always-auth: false
+2025-06-10T22:04:11.5602434Z   check-latest: false
+2025-06-10T22:04:11.5602756Z   token: ***
+2025-06-10T22:04:11.5603114Z ##[endgroup]
+2025-06-10T22:04:11.7836126Z Found in cache @ /opt/hostedtoolcache/node/20.19.2/x64
+2025-06-10T22:04:11.7837071Z ##[group]Environment details
+2025-06-10T22:04:13.6295864Z node: v20.19.2
+2025-06-10T22:04:13.6298266Z npm: 10.8.2
+2025-06-10T22:04:13.6299994Z yarn: 1.22.22
+2025-06-10T22:04:13.6304727Z ##[endgroup]
+2025-06-10T22:04:13.6315731Z [command]/opt/hostedtoolcache/node/20.19.2/x64/bin/npm config get cache
+2025-06-10T22:04:13.8760586Z /home/runner/.npm
+2025-06-10T22:04:14.1661511Z npm cache is not found
+2025-06-10T22:04:14.1785397Z ##[group]Run npm ci --production
+2025-06-10T22:04:14.1785753Z [36;1mnpm ci --production[0m
+2025-06-10T22:04:14.1861019Z shell: /usr/bin/bash -e {0}
+2025-06-10T22:04:14.1861315Z ##[endgroup]
+2025-06-10T22:04:14.2849640Z npm warn config production Use `--omit=dev` instead.
+2025-06-10T22:04:23.0691338Z 
+2025-06-10T22:04:23.0696489Z added 372 packages, and audited 373 packages in 9s
+2025-06-10T22:04:23.0700177Z 
+2025-06-10T22:04:23.0702793Z 52 packages are looking for funding
+2025-06-10T22:04:23.0706368Z   run `npm fund` for details
+2025-06-10T22:04:23.0710491Z 
+2025-06-10T22:04:23.0710796Z found 0 vulnerabilities
+2025-06-10T22:04:23.1062137Z ##[group]Run cd client
+2025-06-10T22:04:23.1062436Z [36;1mcd client[0m
+2025-06-10T22:04:23.1062650Z [36;1mnpm ci[0m
+2025-06-10T22:04:23.1062849Z [36;1mnpm run build[0m
+2025-06-10T22:04:23.1063074Z [36;1mcd ..[0m
+2025-06-10T22:04:23.1063849Z [36;1mnpx esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist[0m
+2025-06-10T22:04:23.1064413Z [36;1mmkdir -p dist/public[0m
+2025-06-10T22:04:23.1064690Z [36;1mcp -r client/dist/* dist/public/[0m
+2025-06-10T22:04:23.1116272Z shell: /usr/bin/bash -e {0}
+2025-06-10T22:04:23.1116567Z ##[endgroup]
+2025-06-10T22:04:23.6325575Z npm error code EUSAGE
+2025-06-10T22:04:23.6354314Z npm error
+2025-06-10T22:04:23.6355464Z npm error The `npm ci` command can only install with an existing package-lock.json or
+2025-06-10T22:04:23.6356662Z npm error npm-shrinkwrap.json with lockfileVersion >= 1. Run an install with npm@5 or
+2025-06-10T22:04:23.6357860Z npm error later to generate a package-lock.json file, then try again.
+2025-06-10T22:04:23.6358513Z npm error
+2025-06-10T22:04:23.6358952Z npm error Clean install a project
+2025-06-10T22:04:23.6359435Z npm error
+2025-06-10T22:04:23.6359769Z npm error Usage:
+2025-06-10T22:04:23.6360152Z npm error npm ci
+2025-06-10T22:04:23.6360520Z npm error
+2025-06-10T22:04:23.6360870Z npm error Options:
+2025-06-10T22:04:23.6361675Z npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+2025-06-10T22:04:23.6362793Z npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+2025-06-10T22:04:23.6364180Z npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+2025-06-10T22:04:23.6365307Z npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+2025-06-10T22:04:23.6366175Z npm error [--no-bin-links] [--no-fund] [--dry-run]
+2025-06-10T22:04:23.6367123Z npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+2025-06-10T22:04:23.6368132Z npm error [-ws|--workspaces] [--include-workspace-root] [--install-links]
+2025-06-10T22:04:23.6368757Z npm error
+2025-06-10T22:04:23.6369382Z npm error aliases: clean-install, ic, install-clean, isntall-clean
+2025-06-10T22:04:23.6369966Z npm error
+2025-06-10T22:04:23.6370456Z npm error Run "npm help ci" for more info
+2025-06-10T22:04:23.6384674Z npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2025-06-10T22_04_23_212Z-debug-0.log
+2025-06-10T22:04:23.6515508Z ##[error]Process completed with exit code 1.
+2025-06-10T22:04:23.6675487Z Post job cleanup.
+2025-06-10T22:04:23.8114951Z [command]/usr/bin/git version
+2025-06-10T22:04:23.8181540Z git version 2.49.0
+2025-06-10T22:04:23.8267001Z Temporarily overriding HOME='/home/runner/work/_temp/2541f939-2f22-48d4-b5c6-4495e955c0b9' before making global git config changes
+2025-06-10T22:04:23.8273033Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-10T22:04:23.8286312Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/KamboHealing/KamboHealing
+2025-06-10T22:04:23.8376594Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-10T22:04:23.8449660Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-10T22:04:23.9205072Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-10T22:04:23.9290411Z http.https://github.com/.extraheader
+2025-06-10T22:04:23.9330403Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-06-10T22:04:23.9434643Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-10T22:04:24.0450638Z Cleaning up orphan processes

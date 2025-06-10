@@ -1,0 +1,12 @@
+﻿2025-06-10T22:04:14.1785378Z ##[group]Run npm ci --production
+2025-06-10T22:04:14.1785741Z [36;1mnpm ci --production[0m
+2025-06-10T22:04:14.1861001Z shell: /usr/bin/bash -e {0}
+2025-06-10T22:04:14.1861303Z ##[endgroup]
+2025-06-10T22:04:14.2849572Z npm warn config production Use `--omit=dev` instead.
+2025-06-10T22:04:23.0691153Z 
+2025-06-10T22:04:23.0696449Z added 372 packages, and audited 373 packages in 9s
+2025-06-10T22:04:23.0700158Z 
+2025-06-10T22:04:23.0702772Z 52 packages are looking for funding
+2025-06-10T22:04:23.0706323Z   run `npm fund` for details
+2025-06-10T22:04:23.0710472Z 
+2025-06-10T22:04:23.0710784Z found 0 vulnerabilities

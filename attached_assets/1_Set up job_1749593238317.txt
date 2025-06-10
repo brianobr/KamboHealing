@@ -1,0 +1,40 @@
+﻿2025-06-10T22:04:05.4502714Z Current runner version: '2.325.0'
+2025-06-10T22:04:05.4538882Z ##[group]Runner Image Provisioner
+2025-06-10T22:04:05.4540230Z Hosted Compute Agent
+2025-06-10T22:04:05.4541329Z Version: 20250529.345
+2025-06-10T22:04:05.4542347Z Commit: 22237e57af968c281070ffa8ed912c1b754f9a23
+2025-06-10T22:04:05.4543772Z Build Date: 2025-05-29T20:18:30Z
+2025-06-10T22:04:05.4544990Z ##[endgroup]
+2025-06-10T22:04:05.4545903Z ##[group]Operating System
+2025-06-10T22:04:05.4546877Z Ubuntu
+2025-06-10T22:04:05.4547791Z 24.04.2
+2025-06-10T22:04:05.4548618Z LTS
+2025-06-10T22:04:05.4549417Z ##[endgroup]
+2025-06-10T22:04:05.4550498Z ##[group]Runner Image
+2025-06-10T22:04:05.4551395Z Image: ubuntu-24.04
+2025-06-10T22:04:05.4552239Z Version: 20250602.3.0
+2025-06-10T22:04:05.4554483Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250602.3/images/ubuntu/Ubuntu2404-Readme.md
+2025-06-10T22:04:05.4557114Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250602.3
+2025-06-10T22:04:05.4559259Z ##[endgroup]
+2025-06-10T22:04:05.4561166Z ##[group]GITHUB_TOKEN Permissions
+2025-06-10T22:04:05.4564790Z Contents: read
+2025-06-10T22:04:05.4565699Z Metadata: read
+2025-06-10T22:04:05.4566586Z Packages: read
+2025-06-10T22:04:05.4567421Z ##[endgroup]
+2025-06-10T22:04:05.4570453Z Secret source: Actions
+2025-06-10T22:04:05.4572030Z Prepare workflow directory
+2025-06-10T22:04:05.5237939Z Prepare all required actions
+2025-06-10T22:04:05.5295009Z Getting action download info
+2025-06-10T22:04:06.0952368Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-06-10T22:04:06.0953686Z Version: 4.2.2
+2025-06-10T22:04:06.0954697Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-06-10T22:04:06.0955999Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-06-10T22:04:06.0956784Z ##[endgroup]
+2025-06-10T22:04:06.1792998Z ##[group]Download immutable action package 'actions/setup-node@v3'
+2025-06-10T22:04:06.1794129Z Version: 3.9.1
+2025-06-10T22:04:06.1795032Z Digest: sha256:d8c8dbd6e63927801f9de42620f961a361b03be6034dcc11e83ca01f50cb9f40
+2025-06-10T22:04:06.1796137Z Source commit SHA: 3235b876344d2a9aa001b8d1453c930bba69e610
+2025-06-10T22:04:06.1796809Z ##[endgroup]
+2025-06-10T22:04:06.7228884Z Download action repository 'azure/login@v2' (SHA:a457da9ea143d694b1b9c7c869ebb04ebe844ef5)
+2025-06-10T22:04:07.1641749Z Download action repository 'azure/webapps-deploy@v3' (SHA:2fdd5c3ebb4e540834e86ecc1f6fdcd5539023ee)
+2025-06-10T22:04:10.0400835Z Complete job name: build-and-deploy
