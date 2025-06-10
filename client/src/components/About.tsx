@@ -6,10 +6,10 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="fade-in">
-            {/* Professional portrait of a bearded man in natural outdoor setting */}
+            {/* Matt O'Brien - Professional headshot */}
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=1000" 
-              alt="Matt O'Brien - Kambo Practitioner" 
+              src="@assets/Matt Headshot-Enhanced_1749577277724.png" 
+              alt="Matt O'Brien - Certified Kambo Practitioner" 
               className="rounded-2xl shadow-2xl w-full h-auto"
             />
           </div>
