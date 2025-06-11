@@ -11,7 +11,7 @@ export default function About() {
             <img 
               src={mattHeadshot} 
               alt="Matt O'Brien - Certified Kambo Practitioner" 
-              className="rounded-2xl shadow-2xl w-full h-[600px] object-cover object-center"
+              className="rounded-2xl shadow-2xl w-full h-[600px] object-cover object-top"
             />
           </div>
           <div className="fade-in">
