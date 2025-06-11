@@ -1,4 +1,5 @@
 import { ChevronDown } from "lucide-react";
+import amazonRainforestHero from "@assets/Firefly_Create a website -hero image- of the Amazon rainforest 540047_1749662517505.jpg";
 
 export default function Hero() {
   const scrollToNext = () => {
@@ -28,7 +29,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center" 
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
+          backgroundImage: `url(${amazonRainforestHero})`
         }}
       />
       <div className="absolute inset-0 hero-overlay" />
