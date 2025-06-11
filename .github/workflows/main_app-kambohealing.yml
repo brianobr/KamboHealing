@@ -63,9 +63,40 @@ jobs:
           echo "- Client files: $(ls -la dist/public/index.html 2>/dev/null || echo 'MISSING')"
           echo "- Package files: $(ls -la dist/package.json 2>/dev/null || echo 'MISSING')"
 
+      - name: Create deployment package
+        run: |
+          # Create a complete deployment structure
+          mkdir -p deployment
+          
+          # Copy built server
+          cp dist/index.js deployment/
+          
+          # Copy client assets
+          mkdir -p deployment/public
+          cp -r dist/public/* deployment/public/
+          
+          # Copy startup script
+          cp startup.sh deployment/
+          chmod +x deployment/startup.sh
+          
+          # Create a minimal package.json for Azure
+          cat > deployment/package.json << 'EOF'
+          {
+            "name": "kambo-website",
+            "version": "1.0.0",
+            "type": "module",
+            "scripts": {
+              "start": "node index.js"
+            },
+            "engines": {
+              "node": ">=20.0.0"
+            }
+          }
+          EOF
+
       - name: Zip artifact for deployment
         run: |
-          cd dist
+          cd deployment
           zip -r ../release.zip ./*
           cd ..
 
@@ -108,4 +139,4 @@ jobs:
           app-name: 'app-kamboHealing'
           slot-name: 'Production'
           package: .
-          startup-command: 'node index.js'
+          startup-command: './startup.sh'
