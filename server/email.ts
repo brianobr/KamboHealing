@@ -1,10 +1,12 @@
 import sgMail from '@sendgrid/mail';
 
-if (!process.env.SENDGRID_API_KEY) {
-  throw new Error("SENDGRID_API_KEY environment variable must be set");
-}
+const SENDGRID_CONFIGURED = process.env.SENDGRID_API_KEY && process.env.SENDGRID_API_KEY.startsWith('SG.');
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+if (SENDGRID_CONFIGURED) {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+} else {
+  console.warn('SendGrid not configured - email notifications disabled');
+}
 
 interface ContactFormData {
   firstName: string;
@@ -19,6 +21,11 @@ const MATT_EMAIL = 'matt@kambowithmatt.com';
 const FROM_EMAIL = 'noreply@kambowithmatt.com'; // This should be a verified sender in SendGrid
 
 export async function sendContactNotification(formData: ContactFormData): Promise<boolean> {
+  if (!SENDGRID_CONFIGURED) {
+    console.log('Email notification skipped - SendGrid not configured');
+    return false;
+  }
+
   try {
     // Email to Matt (notification)
     const notificationEmail = {
