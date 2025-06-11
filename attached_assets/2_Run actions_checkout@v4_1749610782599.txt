@@ -1,0 +1,67 @@
+﻿2025-06-11T02:10:41.6730758Z ##[group]Run actions/checkout@v4
+2025-06-11T02:10:41.6731807Z with:
+2025-06-11T02:10:41.6732221Z   repository: brianobr/KamboHealing
+2025-06-11T02:10:41.6732864Z   token: ***
+2025-06-11T02:10:41.6733241Z   ssh-strict: true
+2025-06-11T02:10:41.6733619Z   ssh-user: git
+2025-06-11T02:10:41.6734016Z   persist-credentials: true
+2025-06-11T02:10:41.6734442Z   clean: true
+2025-06-11T02:10:41.6734848Z   sparse-checkout-cone-mode: true
+2025-06-11T02:10:41.6735308Z   fetch-depth: 1
+2025-06-11T02:10:41.6735689Z   fetch-tags: false
+2025-06-11T02:10:41.6736077Z   show-progress: true
+2025-06-11T02:10:41.6736476Z   lfs: false
+2025-06-11T02:10:41.6736833Z   submodules: false
+2025-06-11T02:10:41.6737228Z   set-safe-directory: true
+2025-06-11T02:10:41.6737856Z ##[endgroup]
+2025-06-11T02:10:41.7855305Z Syncing repository: brianobr/KamboHealing
+2025-06-11T02:10:41.7858647Z ##[group]Getting Git version info
+2025-06-11T02:10:41.7859783Z Working directory is '/home/runner/work/KamboHealing/KamboHealing'
+2025-06-11T02:10:41.7861794Z [command]/usr/bin/git version
+2025-06-11T02:10:41.7913011Z git version 2.49.0
+2025-06-11T02:10:41.7945100Z ##[endgroup]
+2025-06-11T02:10:41.7964955Z Temporarily overriding HOME='/home/runner/work/_temp/7b8eef28-e727-4bf5-9369-0e85a931e31c' before making global git config changes
+2025-06-11T02:10:41.7968709Z Adding repository directory to the temporary git global config as a safe directory
+2025-06-11T02:10:41.7972805Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/KamboHealing/KamboHealing
+2025-06-11T02:10:41.8020378Z Deleting the contents of '/home/runner/work/KamboHealing/KamboHealing'
+2025-06-11T02:10:41.8025035Z ##[group]Initializing the repository
+2025-06-11T02:10:41.8029778Z [command]/usr/bin/git init /home/runner/work/KamboHealing/KamboHealing
+2025-06-11T02:10:41.8100944Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-06-11T02:10:41.8103140Z hint: is subject to change. To configure the initial branch name to use in all
+2025-06-11T02:10:41.8105610Z hint: of your new repositories, which will suppress this warning, call:
+2025-06-11T02:10:41.8106713Z hint:
+2025-06-11T02:10:41.8107990Z hint: 	git config --global init.defaultBranch <name>
+2025-06-11T02:10:41.8109253Z hint:
+2025-06-11T02:10:41.8110249Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-06-11T02:10:41.8112122Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-06-11T02:10:41.8113474Z hint:
+2025-06-11T02:10:41.8114188Z hint: 	git branch -m <name>
+2025-06-11T02:10:41.8116192Z Initialized empty Git repository in /home/runner/work/KamboHealing/KamboHealing/.git/
+2025-06-11T02:10:41.8120655Z [command]/usr/bin/git remote add origin https://github.com/brianobr/KamboHealing
+2025-06-11T02:10:41.8156633Z ##[endgroup]
+2025-06-11T02:10:41.8157864Z ##[group]Disabling automatic garbage collection
+2025-06-11T02:10:41.8161211Z [command]/usr/bin/git config --local gc.auto 0
+2025-06-11T02:10:41.8193999Z ##[endgroup]
+2025-06-11T02:10:41.8195224Z ##[group]Setting up auth
+2025-06-11T02:10:41.8200720Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-06-11T02:10:41.8233589Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-06-11T02:10:41.8560020Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-06-11T02:10:41.8593074Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-06-11T02:10:41.8821606Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-06-11T02:10:41.8858187Z ##[endgroup]
+2025-06-11T02:10:41.8859724Z ##[group]Fetching the repository
+2025-06-11T02:10:41.8867751Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +09a40d590c6780dea8247a53c585739cd71ee3fa:refs/remotes/origin/main
+2025-06-11T02:10:42.4059572Z From https://github.com/brianobr/KamboHealing
+2025-06-11T02:10:42.4061234Z  * [new ref]         09a40d590c6780dea8247a53c585739cd71ee3fa -> origin/main
+2025-06-11T02:10:42.4064087Z ##[endgroup]
+2025-06-11T02:10:42.4066372Z ##[group]Determining the checkout info
+2025-06-11T02:10:42.4067902Z ##[endgroup]
+2025-06-11T02:10:42.4069610Z [command]/usr/bin/git sparse-checkout disable
+2025-06-11T02:10:42.4113454Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-06-11T02:10:42.4139676Z ##[group]Checking out the ref
+2025-06-11T02:10:42.4142871Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-06-11T02:10:42.4483951Z Switched to a new branch 'main'
+2025-06-11T02:10:42.4487969Z branch 'main' set up to track 'origin/main'.
+2025-06-11T02:10:42.4495476Z ##[endgroup]
+2025-06-11T02:10:42.4533692Z [command]/usr/bin/git log -1 --format=%H
+2025-06-11T02:10:42.4558011Z 09a40d590c6780dea8247a53c585739cd71ee3fa

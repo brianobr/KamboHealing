@@ -1,0 +1,18 @@
+﻿2025-06-11T02:10:43.2740470Z ##[group]Run # Remove any lock files that might cause conflicts
+2025-06-11T02:10:43.2741647Z [36;1m# Remove any lock files that might cause conflicts[0m
+2025-06-11T02:10:43.2742391Z [36;1mrm -f package-lock.json npm-shrinkwrap.json[0m
+2025-06-11T02:10:43.2743087Z [36;1mnpm install --omit=dev --no-package-lock[0m
+2025-06-11T02:10:43.2846616Z shell: /usr/bin/bash -e {0}
+2025-06-11T02:10:43.2847120Z ##[endgroup]
+2025-06-11T02:11:32.8504698Z 
+2025-06-11T02:11:32.8517257Z added 378 packages, and audited 379 packages in 49s
+2025-06-11T02:11:32.8529000Z 
+2025-06-11T02:11:32.8529646Z 52 packages are looking for funding
+2025-06-11T02:11:32.8530555Z   run `npm fund` for details
+2025-06-11T02:11:32.8797653Z 
+2025-06-11T02:11:32.8800283Z 6 low severity vulnerabilities
+2025-06-11T02:11:32.8804292Z 
+2025-06-11T02:11:32.8804742Z Some issues need review, and may require choosing
+2025-06-11T02:11:32.8805365Z a different dependency.
+2025-06-11T02:11:32.8807007Z 
+2025-06-11T02:11:32.8809011Z Run `npm audit` for details.

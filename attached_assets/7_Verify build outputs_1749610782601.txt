@@ -1,0 +1,11 @@
+﻿2025-06-11T02:11:52.3690367Z ##[group]Run echo "Build verification:"
+2025-06-11T02:11:52.3690702Z [36;1mecho "Build verification:"[0m
+2025-06-11T02:11:52.3691418Z [36;1mecho "- Server bundle: $(ls -la dist/index.js 2>/dev/null || echo 'MISSING')"[0m
+2025-06-11T02:11:52.3691947Z [36;1mecho "- Client files: $(ls -la dist/public/index.html 2>/dev/null || echo 'MISSING')"[0m
+2025-06-11T02:11:52.3692449Z [36;1mecho "- Package files: $(ls -la dist/package.json 2>/dev/null || echo 'MISSING')"[0m
+2025-06-11T02:11:52.3744111Z shell: /usr/bin/bash -e {0}
+2025-06-11T02:11:52.3744332Z ##[endgroup]
+2025-06-11T02:11:52.3810890Z Build verification:
+2025-06-11T02:11:52.3831594Z - Server bundle: -rw-r--r-- 1 runner docker 8280 Jun 11 02:11 dist/index.js
+2025-06-11T02:11:52.3850407Z - Client files: -rw-r--r-- 1 runner docker 851 Jun 11 02:11 dist/public/index.html
+2025-06-11T02:11:52.3870122Z - Package files: -rw-r--r-- 1 runner docker 3536 Jun 11 02:11 dist/package.json

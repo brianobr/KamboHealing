@@ -1,0 +1,22 @@
+﻿2025-06-11T02:11:50.9141735Z ##[group]Run # Create dist directory and build server
+2025-06-11T02:11:50.9142196Z [36;1m# Create dist directory and build server[0m
+2025-06-11T02:11:50.9142715Z [36;1mnpx esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --minify[0m
+2025-06-11T02:11:50.9143188Z [36;1m[0m
+2025-06-11T02:11:50.9143392Z [36;1m# Copy client build to expected locations[0m
+2025-06-11T02:11:50.9143658Z [36;1mmkdir -p dist/public[0m
+2025-06-11T02:11:50.9143898Z [36;1mcp -r client/dist/* dist/public/[0m
+2025-06-11T02:11:50.9144149Z [36;1m[0m
+2025-06-11T02:11:50.9144308Z [36;1m# Copy deployment files[0m
+2025-06-11T02:11:50.9144542Z [36;1mcp package.json dist/[0m
+2025-06-11T02:11:50.9144786Z [36;1m# Copy package-lock.json only if it exists[0m
+2025-06-11T02:11:50.9145237Z [36;1m[ -f package-lock.json ] && cp package-lock.json dist/ || echo "No package-lock.json found, skipping..."[0m
+2025-06-11T02:11:50.9145662Z [36;1mcp startup.sh dist/[0m
+2025-06-11T02:11:50.9145912Z [36;1mchmod +x dist/startup.sh[0m
+2025-06-11T02:11:50.9197055Z shell: /usr/bin/bash -e {0}
+2025-06-11T02:11:50.9197292Z ##[endgroup]
+2025-06-11T02:11:51.8598278Z npm warn exec The following package was not found and will be installed: esbuild@0.25.5
+2025-06-11T02:11:52.3439038Z 
+2025-06-11T02:11:52.3440889Z   dist/index.js  8.1kb
+2025-06-11T02:11:52.3443957Z 
+2025-06-11T02:11:52.3444510Z ⚡ Done in 4ms
+2025-06-11T02:11:52.3638706Z No package-lock.json found, skipping...

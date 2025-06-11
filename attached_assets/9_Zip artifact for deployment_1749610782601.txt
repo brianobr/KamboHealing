@@ -1,0 +1,18 @@
+﻿2025-06-11T02:11:52.4148042Z ##[group]Run cd deployment
+2025-06-11T02:11:52.4148299Z [36;1mcd deployment[0m
+2025-06-11T02:11:52.4148513Z [36;1mzip -r ../release.zip ./*[0m
+2025-06-11T02:11:52.4148741Z [36;1mcd ..[0m
+2025-06-11T02:11:52.4194925Z shell: /usr/bin/bash -e {0}
+2025-06-11T02:11:52.4195168Z ##[endgroup]
+2025-06-11T02:11:52.4605310Z   adding: index.js (deflated 57%)
+2025-06-11T02:11:52.4608727Z   adding: package.json (deflated 29%)
+2025-06-11T02:11:52.4611207Z   adding: public/ (stored 0%)
+2025-06-11T02:11:52.4611707Z   adding: public/assets/ (stored 0%)
+2025-06-11T02:11:52.4661686Z   adding: public/assets/vendor-1XCZ5AD1.js (deflated 68%)
+2025-06-11T02:11:52.5877783Z   adding: public/assets/Matt Headshot-Enhanced_1749577277724-RlzqN4lW.png (deflated 1%)
+2025-06-11T02:11:52.5906406Z   adding: public/assets/ui-BS8b-lce.js (deflated 64%)
+2025-06-11T02:11:52.5922891Z   adding: public/assets/index-D9T9HKUY.css (deflated 82%)
+2025-06-11T02:11:52.5925715Z   adding: public/assets/icons-DfQqX6tX.js (deflated 75%)
+2025-06-11T02:11:52.5987804Z   adding: public/assets/index-snYSb0dd.js (deflated 70%)
+2025-06-11T02:11:52.5988794Z   adding: public/index.html (deflated 50%)
+2025-06-11T02:11:52.5989647Z   adding: startup.sh (deflated 49%)

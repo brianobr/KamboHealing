@@ -1,0 +1,20 @@
+﻿2025-06-11T02:11:52.6074946Z ##[group]Run actions/upload-artifact@v4
+2025-06-11T02:11:52.6075221Z with:
+2025-06-11T02:11:52.6075385Z   name: node-app
+2025-06-11T02:11:52.6075557Z   path: release.zip
+2025-06-11T02:11:52.6075752Z   if-no-files-found: warn
+2025-06-11T02:11:52.6075948Z   compression-level: 6
+2025-06-11T02:11:52.6076138Z   overwrite: false
+2025-06-11T02:11:52.6076318Z   include-hidden-files: false
+2025-06-11T02:11:52.6076537Z ##[endgroup]
+2025-06-11T02:11:52.8982849Z With the provided path, there will be 1 file uploaded
+2025-06-11T02:11:52.8984171Z Artifact name is valid!
+2025-06-11T02:11:52.8984686Z Root directory input is valid!
+2025-06-11T02:11:53.0326587Z Beginning upload of artifact content to blob storage
+2025-06-11T02:11:53.3997747Z Uploaded bytes 4064496
+2025-06-11T02:11:53.4211782Z Finished uploading artifact content to blob storage!
+2025-06-11T02:11:53.4214637Z SHA256 digest of uploaded artifact zip is c4c93d5f23235ac6b37104c003654870e7b84f0e5c4c77a65e1a0bd19397d623
+2025-06-11T02:11:53.4216231Z Finalizing artifact upload
+2025-06-11T02:11:53.5290716Z Artifact node-app.zip successfully finalized. Artifact ID 3301802026
+2025-06-11T02:11:53.5292311Z Artifact node-app has been successfully uploaded! Final size is 4064496 bytes. Artifact ID is 3301802026
+2025-06-11T02:11:53.5299819Z Artifact download URL: https://github.com/brianobr/KamboHealing/actions/runs/15574415506/artifacts/3301802026

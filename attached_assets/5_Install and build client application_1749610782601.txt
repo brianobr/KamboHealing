@@ -1,0 +1,40 @@
+﻿2025-06-11T02:11:32.9117524Z ##[group]Run cd client
+2025-06-11T02:11:32.9117812Z [36;1mcd client[0m
+2025-06-11T02:11:32.9118027Z [36;1m# Ensure completely clean install[0m
+2025-06-11T02:11:32.9118380Z [36;1mrm -rf node_modules package-lock.json npm-shrinkwrap.json[0m
+2025-06-11T02:11:32.9118725Z [36;1m# Install without lock file constraints[0m
+2025-06-11T02:11:32.9119002Z [36;1mnpm install --legacy-peer-deps[0m
+2025-06-11T02:11:32.9119274Z [36;1m# Build with increased timeout and memory[0m
+2025-06-11T02:11:32.9119604Z [36;1mNODE_OPTIONS="--max-old-space-size=4096" npm run build[0m
+2025-06-11T02:11:32.9119904Z [36;1mcd ..[0m
+2025-06-11T02:11:32.9174745Z shell: /usr/bin/bash -e {0}
+2025-06-11T02:11:32.9174998Z ##[endgroup]
+2025-06-11T02:11:43.3278047Z 
+2025-06-11T02:11:43.3302303Z added 333 packages, and audited 334 packages in 10s
+2025-06-11T02:11:43.3302969Z 
+2025-06-11T02:11:43.3303341Z 48 packages are looking for funding
+2025-06-11T02:11:43.3303875Z   run `npm fund` for details
+2025-06-11T02:11:43.3806641Z 
+2025-06-11T02:11:43.3807737Z 7 vulnerabilities (5 low, 2 moderate)
+2025-06-11T02:11:43.3808241Z 
+2025-06-11T02:11:43.3808737Z To address all issues (including breaking changes), run:
+2025-06-11T02:11:43.3809396Z   npm audit fix --force
+2025-06-11T02:11:43.3809775Z 
+2025-06-11T02:11:43.3810065Z Run `npm audit` for details.
+2025-06-11T02:11:43.6299219Z 
+2025-06-11T02:11:43.6300337Z > kambo-website-client@0.0.0 build
+2025-06-11T02:11:43.6301612Z > vite build
+2025-06-11T02:11:43.6301939Z 
+2025-06-11T02:11:44.4318351Z [36mvite v5.4.19 [32mbuilding for production...[36m[39m
+2025-06-11T02:11:44.5009901Z transforming...
+2025-06-11T02:11:50.3325130Z [32m✓[39m 1724 modules transformed.
+2025-06-11T02:11:50.6720912Z rendering chunks...
+2025-06-11T02:11:50.8507459Z computing gzip size...
+2025-06-11T02:11:50.8610407Z [2mdist/[22m[32mindex.html                                                [39m[1m[2m    0.85 kB[22m[1m[22m[2m │ gzip:  0.44 kB[22m
+2025-06-11T02:11:50.8613618Z [2mdist/[22m[2massets/[22m[32mMatt Headshot-Enhanced_1749577277724-RlzqN4lW.png  [39m[1m[2m3,958.85 kB[22m[1m[22m
+2025-06-11T02:11:50.8616759Z [2mdist/[22m[2massets/[22m[35mindex-D9T9HKUY.css                                 [39m[1m[2m   60.72 kB[22m[1m[22m[2m │ gzip: 11.08 kB[22m
+2025-06-11T02:11:50.8619801Z [2mdist/[22m[2massets/[22m[36micons-DfQqX6tX.js                                  [39m[1m[2m   10.74 kB[22m[1m[22m[2m │ gzip:  2.68 kB[22m
+2025-06-11T02:11:50.8622925Z [2mdist/[22m[2massets/[22m[36mui-BS8b-lce.js                                     [39m[1m[2m   62.39 kB[22m[1m[22m[2m │ gzip: 22.40 kB[22m
+2025-06-11T02:11:50.8626217Z [2mdist/[22m[2massets/[22m[36mvendor-1XCZ5AD1.js                                 [39m[1m[2m  141.28 kB[22m[1m[22m[2m │ gzip: 45.44 kB[22m
+2025-06-11T02:11:50.8627931Z [2mdist/[22m[2massets/[22m[36mindex-snYSb0dd.js                                  [39m[1m[2m  154.18 kB[22m[1m[22m[2m │ gzip: 45.79 kB[22m
+2025-06-11T02:11:50.8628992Z [32m✓ built in 6.39s[39m

@@ -1,0 +1,31 @@
+﻿2025-06-11T02:11:52.3893544Z ##[group]Run # Create a complete deployment structure
+2025-06-11T02:11:52.3893927Z [36;1m# Create a complete deployment structure[0m
+2025-06-11T02:11:52.3894200Z [36;1mmkdir -p deployment[0m
+2025-06-11T02:11:52.3894405Z [36;1m[0m
+2025-06-11T02:11:52.3894561Z [36;1m# Copy built server[0m
+2025-06-11T02:11:52.3894778Z [36;1mcp dist/index.js deployment/[0m
+2025-06-11T02:11:52.3894994Z [36;1m[0m
+2025-06-11T02:11:52.3895150Z [36;1m# Copy client assets[0m
+2025-06-11T02:11:52.3895363Z [36;1mmkdir -p deployment/public[0m
+2025-06-11T02:11:52.3895629Z [36;1mcp -r dist/public/* deployment/public/[0m
+2025-06-11T02:11:52.3895877Z [36;1m[0m
+2025-06-11T02:11:52.3896046Z [36;1m# Copy startup script[0m
+2025-06-11T02:11:52.3896264Z [36;1mcp startup.sh deployment/[0m
+2025-06-11T02:11:52.3896501Z [36;1mchmod +x deployment/startup.sh[0m
+2025-06-11T02:11:52.3896727Z [36;1m[0m
+2025-06-11T02:11:52.3896912Z [36;1m# Create a minimal package.json for Azure[0m
+2025-06-11T02:11:52.3897193Z [36;1mcat > deployment/package.json << 'EOF'[0m
+2025-06-11T02:11:52.3897448Z [36;1m{[0m
+2025-06-11T02:11:52.3897766Z [36;1m  "name": "kambo-website",[0m
+2025-06-11T02:11:52.3897988Z [36;1m  "version": "1.0.0",[0m
+2025-06-11T02:11:52.3898200Z [36;1m  "type": "module",[0m
+2025-06-11T02:11:52.3898393Z [36;1m  "scripts": {[0m
+2025-06-11T02:11:52.3898590Z [36;1m    "start": "node index.js"[0m
+2025-06-11T02:11:52.3898797Z [36;1m  },[0m
+2025-06-11T02:11:52.3898962Z [36;1m  "engines": {[0m
+2025-06-11T02:11:52.3899143Z [36;1m    "node": ">=20.0.0"[0m
+2025-06-11T02:11:52.3899338Z [36;1m  }[0m
+2025-06-11T02:11:52.3899494Z [36;1m}[0m
+2025-06-11T02:11:52.3899637Z [36;1mEOF[0m
+2025-06-11T02:11:52.3945547Z shell: /usr/bin/bash -e {0}
+2025-06-11T02:11:52.3945771Z ##[endgroup]

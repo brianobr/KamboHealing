@@ -1,0 +1,133 @@
+﻿2025-06-11T02:11:59.9858548Z Current runner version: '2.325.0'
+2025-06-11T02:11:59.9892484Z ##[group]Runner Image Provisioner
+2025-06-11T02:11:59.9893764Z Hosted Compute Agent
+2025-06-11T02:11:59.9895011Z Version: 20250529.345
+2025-06-11T02:11:59.9896130Z Commit: 22237e57af968c281070ffa8ed912c1b754f9a23
+2025-06-11T02:11:59.9897293Z Build Date: 2025-05-29T20:18:30Z
+2025-06-11T02:11:59.9898302Z ##[endgroup]
+2025-06-11T02:11:59.9899136Z ##[group]Operating System
+2025-06-11T02:11:59.9900091Z Ubuntu
+2025-06-11T02:11:59.9900982Z 24.04.2
+2025-06-11T02:11:59.9901725Z LTS
+2025-06-11T02:11:59.9902467Z ##[endgroup]
+2025-06-11T02:11:59.9903339Z ##[group]Runner Image
+2025-06-11T02:11:59.9904261Z Image: ubuntu-24.04
+2025-06-11T02:11:59.9905313Z Version: 20250602.3.0
+2025-06-11T02:11:59.9907075Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250602.3/images/ubuntu/Ubuntu2404-Readme.md
+2025-06-11T02:11:59.9909683Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250602.3
+2025-06-11T02:11:59.9911444Z ##[endgroup]
+2025-06-11T02:11:59.9913055Z ##[group]GITHUB_TOKEN Permissions
+2025-06-11T02:11:59.9915932Z Contents: read
+2025-06-11T02:11:59.9916827Z Metadata: read
+2025-06-11T02:11:59.9917660Z ##[endgroup]
+2025-06-11T02:11:59.9920998Z Secret source: Actions
+2025-06-11T02:11:59.9922050Z Prepare workflow directory
+2025-06-11T02:12:00.0381567Z Prepare all required actions
+2025-06-11T02:12:00.0437748Z Getting action download info
+2025-06-11T02:12:00.4454576Z ##[group]Download immutable action package 'actions/download-artifact@v4'
+2025-06-11T02:12:00.4455910Z Version: 4.3.0
+2025-06-11T02:12:00.4456996Z Digest: sha256:552a5b9ad918f62ec0c2e8f42f3c694d4ebd1b4036b18c39b14168fcdfc0e4f2
+2025-06-11T02:12:00.4458172Z Source commit SHA: d3f86a106a0bac45b974a628896c90dbdf5c8093
+2025-06-11T02:12:00.4458987Z ##[endgroup]
+2025-06-11T02:12:00.6947294Z Download action repository 'azure/login@v2' (SHA:a457da9ea143d694b1b9c7c869ebb04ebe844ef5)
+2025-06-11T02:12:00.9494586Z Download action repository 'azure/webapps-deploy@v3' (SHA:2fdd5c3ebb4e540834e86ecc1f6fdcd5539023ee)
+2025-06-11T02:12:03.5036558Z Complete job name: deploy
+2025-06-11T02:12:03.5627171Z ##[group]Run actions/download-artifact@v4
+2025-06-11T02:12:03.5627806Z with:
+2025-06-11T02:12:03.5628047Z   name: node-app
+2025-06-11T02:12:03.5628301Z   merge-multiple: false
+2025-06-11T02:12:03.5628574Z   repository: brianobr/KamboHealing
+2025-06-11T02:12:03.5628848Z   run-id: 15574415506
+2025-06-11T02:12:03.5629267Z ##[endgroup]
+2025-06-11T02:12:03.7983097Z Downloading single artifact
+2025-06-11T02:12:03.8906290Z Preparing to download the following artifacts:
+2025-06-11T02:12:03.8908486Z - node-app (ID: 3301802026, Size: 4064496, Expected Digest: sha256:c4c93d5f23235ac6b37104c003654870e7b84f0e5c4c77a65e1a0bd19397d623)
+2025-06-11T02:12:03.9443481Z Redirecting to blob download url: https://productionresultssa1.blob.core.windows.net/actions-results/5fff516f-07bf-47a2-bf17-b400c36d5216/workflow-job-run-21f3ca28-0123-5f64-9a0c-caa520c02aaf/artifacts/236bf3d06418ac7275c91e12343cfbf289a60ef44239b89d4056c5a20b2ba55d.zip
+2025-06-11T02:12:03.9446202Z Starting download of artifact to: /home/runner/work/KamboHealing/KamboHealing
+2025-06-11T02:12:04.0537635Z (node:1816) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2025-06-11T02:12:04.0539343Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-11T02:12:04.1591514Z SHA256 digest of downloaded artifact is c4c93d5f23235ac6b37104c003654870e7b84f0e5c4c77a65e1a0bd19397d623
+2025-06-11T02:12:04.1616071Z Artifact download completed successfully.
+2025-06-11T02:12:04.1616704Z Total of 1 artifact(s) downloaded
+2025-06-11T02:12:04.1617282Z Download artifact has finished successfully
+2025-06-11T02:12:04.1742282Z ##[group]Run unzip release.zip
+2025-06-11T02:12:04.1742942Z [36;1munzip release.zip[0m
+2025-06-11T02:12:04.1878030Z shell: /usr/bin/bash -e {0}
+2025-06-11T02:12:04.1878557Z ##[endgroup]
+2025-06-11T02:12:04.2265794Z Archive:  release.zip
+2025-06-11T02:12:04.2266753Z   inflating: index.js                
+2025-06-11T02:12:04.2267493Z   inflating: package.json            
+2025-06-11T02:12:04.2268199Z    creating: public/
+2025-06-11T02:12:04.2268933Z    creating: public/assets/
+2025-06-11T02:12:04.2269707Z   inflating: public/assets/vendor-1XCZ5AD1.js  
+2025-06-11T02:12:04.2491573Z   inflating: public/assets/Matt Headshot-Enhanced_1749577277724-RlzqN4lW.png  
+2025-06-11T02:12:04.2495046Z   inflating: public/assets/ui-BS8b-lce.js  
+2025-06-11T02:12:04.2499644Z   inflating: public/assets/index-D9T9HKUY.css  
+2025-06-11T02:12:04.2502003Z   inflating: public/assets/icons-DfQqX6tX.js  
+2025-06-11T02:12:04.2522018Z   inflating: public/assets/index-snYSb0dd.js  
+2025-06-11T02:12:04.2525840Z   inflating: public/index.html       
+2025-06-11T02:12:04.2526397Z   inflating: startup.sh              
+2025-06-11T02:12:04.2610210Z ##[group]Run azure/login@v2
+2025-06-11T02:12:04.2610697Z with:
+2025-06-11T02:12:04.2611413Z   client-id: ***
+2025-06-11T02:12:04.2611881Z   tenant-id: ***
+2025-06-11T02:12:04.2612382Z   subscription-id: ***
+2025-06-11T02:12:04.2612838Z   enable-AzPSSession: false
+2025-06-11T02:12:04.2613293Z   environment: azurecloud
+2025-06-11T02:12:04.2613747Z   allow-no-subscriptions: false
+2025-06-11T02:12:04.2614264Z   audience: api://AzureADTokenExchange
+2025-06-11T02:12:04.2614984Z   auth-type: SERVICE_PRINCIPAL
+2025-06-11T02:12:04.2615579Z ##[endgroup]
+2025-06-11T02:12:04.3179843Z Running Azure CLI Login.
+2025-06-11T02:12:16.6127050Z [command]/usr/bin/az cloud set -n azurecloud
+2025-06-11T02:12:16.8156021Z Done setting cloud: "azurecloud"
+2025-06-11T02:12:16.9198381Z Federated token details:
+2025-06-11T02:12:16.9199284Z  issuer - https://token.actions.githubusercontent.com
+2025-06-11T02:12:16.9200172Z  subject claim - repo:brianobr/KamboHealing:environment:Production
+2025-06-11T02:12:16.9201044Z  audience - api://AzureADTokenExchange
+2025-06-11T02:12:16.9202038Z  job_workflow_ref - brianobr/KamboHealing/.github/workflows/main_app-kambohealing.yml@refs/heads/main
+2025-06-11T02:12:16.9203112Z Attempting Azure CLI login by using OIDC...
+2025-06-11T02:12:18.0433892Z Subscription is set successfully.
+2025-06-11T02:12:18.0449733Z Azure CLI login succeeds by using OIDC.
+2025-06-11T02:12:18.0681860Z ##[group]Run azure/webapps-deploy@v3
+2025-06-11T02:12:18.0682373Z with:
+2025-06-11T02:12:18.0682745Z   app-name: app-kamboHealing
+2025-06-11T02:12:18.0683177Z   slot-name: Production
+2025-06-11T02:12:18.0683563Z   package: .
+2025-06-11T02:12:18.0683924Z   startup-command: ./startup.sh
+2025-06-11T02:12:18.0684348Z ##[endgroup]
+2025-06-11T02:12:21.7423173Z Package deployment using OneDeploy initiated.
+2025-06-11T02:12:48.6365157Z {
+2025-06-11T02:12:48.6365901Z   id: 'e40f61ac-2a66-422a-a380-bfc3a66db6c4',
+2025-06-11T02:12:48.6372685Z   status: 4,
+2025-06-11T02:12:48.6373656Z   status_text: '',
+2025-06-11T02:12:48.6374020Z   author_email: 'N/A',
+2025-06-11T02:12:48.6374401Z   author: 'N/A',
+2025-06-11T02:12:48.6374956Z   deployer: 'OneDeploy',
+2025-06-11T02:12:48.6375289Z   message: 'OneDeploy',
+2025-06-11T02:12:48.6375710Z   progress: '',
+2025-06-11T02:12:48.6376049Z   received_time: '2025-06-11T02:12:28.0696056Z',
+2025-06-11T02:12:48.6376578Z   start_time: '2025-06-11T02:12:29.5473435Z',
+2025-06-11T02:12:48.6377042Z   end_time: '2025-06-11T02:12:46.9271297Z',
+2025-06-11T02:12:48.6377576Z   last_success_end_time: '2025-06-11T02:12:46.9271297Z',
+2025-06-11T02:12:48.6378075Z   complete: true,
+2025-06-11T02:12:48.6378402Z   active: true,
+2025-06-11T02:12:48.6378730Z   is_temp: false,
+2025-06-11T02:12:48.6379057Z   is_readonly: true,
+2025-06-11T02:12:48.6379915Z   url: 'https://app-kambohealing.scm.azurewebsites.net/api/deployments/e40f61ac-2a66-422a-a380-bfc3a66db6c4',
+2025-06-11T02:12:48.6381207Z   log_url: 'https://app-kambohealing.scm.azurewebsites.net/api/deployments/e40f61ac-2a66-422a-a380-bfc3a66db6c4/log',
+2025-06-11T02:12:48.6382131Z   site_name: 'app-kambohealing',
+2025-06-11T02:12:48.6382581Z   build_summary: { errors: [], warnings: [] }
+2025-06-11T02:12:48.6383542Z }
+2025-06-11T02:12:48.7875404Z Deploy logs can be viewed at https://app-kambohealing.scm.azurewebsites.net/api/deployments/e40f61ac-2a66-422a-a380-bfc3a66db6c4/log
+2025-06-11T02:12:48.7878718Z Successfully deployed web package to App Service.
+2025-06-11T02:12:49.1517869Z Updating App Service Configuration settings. Data: {"appCommandLine":"./startup.sh"}
+2025-06-11T02:12:50.2919711Z Updated App Service Configuration settings.
+2025-06-11T02:12:50.8175655Z App Service Application URL: https://app-kambohealing.azurewebsites.net
+2025-06-11T02:12:50.8376241Z Post job cleanup.
+2025-06-11T02:12:50.8769348Z Clearing azure cli accounts from the local cache.
+2025-06-11T02:12:50.8778516Z [command]/usr/bin/az account clear
+2025-06-11T02:12:51.3784426Z Evaluate and set environment url
+2025-06-11T02:12:51.3789640Z Evaluated environment url: https://app-kambohealing.azurewebsites.net
+2025-06-11T02:12:51.3791010Z Cleaning up orphan processes
+2025-06-11T02:12:51.4580049Z Terminate orphan process: pid (2052) (python3)

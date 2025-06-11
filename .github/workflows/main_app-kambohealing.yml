@@ -65,15 +65,16 @@ jobs:
 
       - name: Create deployment package
         run: |
-          # Create a complete deployment structure
+          # Create deployment structure that matches server expectations
           mkdir -p deployment
           
-          # Copy built server
-          cp dist/index.js deployment/
+          # Create a server directory structure that matches what the bundled code expects
+          mkdir -p deployment/server
+          cp dist/index.js deployment/server/
           
-          # Copy client assets
-          mkdir -p deployment/public
-          cp -r dist/public/* deployment/public/
+          # Copy client assets to the expected location relative to server
+          mkdir -p deployment/server/public
+          cp -r dist/public/* deployment/server/public/
           
           # Copy startup script
           cp startup.sh deployment/
@@ -86,7 +87,7 @@ jobs:
             "version": "1.0.0",
             "type": "module",
             "scripts": {
-              "start": "node index.js"
+              "start": "cd server && node index.js"
             },
             "engines": {
               "node": ">=20.0.0"
