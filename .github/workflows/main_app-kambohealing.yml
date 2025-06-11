@@ -51,7 +51,8 @@ jobs:
           
           # Copy deployment files
           cp package.json dist/
-          cp package-lock.json dist/
+          # Copy package-lock.json only if it exists
+          [ -f package-lock.json ] && cp package-lock.json dist/ || echo "No package-lock.json found, skipping..."
           cp startup.sh dist/
           chmod +x dist/startup.sh
 
