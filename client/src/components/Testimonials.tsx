@@ -36,7 +36,7 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials?.map((testimonial) => (
-            <div key={testimonial.id} className="testimonial-card p-8 rounded-xl shadow-lg fade-in">
+            <div key={testimonial.id} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 rounded-full bg-forest-green/20 flex items-center justify-center mr-4">
                   <span className="text-forest-green font-semibold text-lg">
