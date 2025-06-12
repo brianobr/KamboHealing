@@ -38,11 +38,11 @@ export default function Testimonials() {
           {testimonials?.map((testimonial) => (
             <div key={testimonial.id} className="testimonial-card p-8 rounded-xl shadow-lg fade-in">
               <div className="flex items-center mb-6">
-                <img 
-                  src={testimonial.imageUrl || 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&w=150&h=150&fit=crop&crop=face'} 
-                  alt={`${testimonial.name} testimonial`} 
-                  className="w-16 h-16 rounded-full object-cover mr-4"
-                />
+                <div className="w-16 h-16 rounded-full bg-forest-green/20 flex items-center justify-center mr-4">
+                  <span className="text-forest-green font-semibold text-lg">
+                    {testimonial.name.charAt(0)}
+                  </span>
+                </div>
                 <div>
                   <h4 className="font-lora font-semibold text-forest-green">{testimonial.name}</h4>
                   <p className="text-earth-brown text-sm">{testimonial.title}</p>
