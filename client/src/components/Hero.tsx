@@ -35,14 +35,14 @@ export default function Hero() {
       <div className="absolute inset-0 hero-overlay" />
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-        <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 fade-in">
-          Sacred Kambo Healing
+        <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-6 fade-in">
+          Safe. Sacred. Transformational.
         </h1>
         <p className="font-lora text-xl md:text-2xl mb-4 fade-in">
           With Matt O'Brien
         </p>
-        <p className="font-opensans text-lg md:text-xl mb-8 max-w-2xl mx-auto fade-in">
-          Experience the transformative power of Amazonian frog medicine in a safe, sacred container guided by years of training and deep reverence for indigenous wisdom.
+        <p className="font-opensans text-lg md:text-xl mb-8 max-w-3xl mx-auto fade-in">
+          Guided Kambo experiences rooted in tradition and backed by modern training.
         </p>
         <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center fade-in">
           <button 
