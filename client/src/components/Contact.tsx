@@ -88,21 +88,21 @@ export default function Contact() {
                 <MapPin className="text-golden-amber text-xl mr-4 mt-1 h-5 w-5" />
                 <div>
                   <h4 className="font-semibold mb-1">Location</h4>
-                  <p className="opacity-90">Serving Northern California<br />Private ceremonial space in Marin County</p>
+                  <p className="opacity-90">Serving Dallas/North Texas area<br />Private ceremonial space</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <Phone className="text-golden-amber text-xl mr-4 mt-1 h-5 w-5" />
                 <div>
                   <h4 className="font-semibold mb-1">Phone</h4>
-                  <p className="opacity-90">(415) 123-4567</p>
+                  <p className="opacity-90">(469) 734-6405</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <Mail className="text-golden-amber text-xl mr-4 mt-1 h-5 w-5" />
                 <div>
                   <h4 className="font-semibold mb-1">Email</h4>
-                  <p className="opacity-90">matt@kambowithmatt.com</p>
+                  <p className="opacity-90">kambocowboy@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start">

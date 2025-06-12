@@ -1,6 +1,19 @@
 import { User, Users, MessageCircle, Check } from "lucide-react";
 
 export default function Services() {
+  const handleBooking = () => {
+    // Open waiver in new tab first
+    window.open('https://waiver.smartwaiver.com/w/a9cbmzgy6sqiquayahen8n/web/', '_blank');
+    
+    // Then scroll to contact section
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 1000);
+  };
+
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -53,7 +66,7 @@ export default function Services() {
             <div className="text-center">
               <div className="text-3xl font-bold text-forest-green mb-4">$250</div>
               <button 
-                onClick={scrollToContact}
+                onClick={handleBooking}
                 className="bg-forest-green text-white px-6 py-3 rounded-full hover:bg-earth-brown transition-colors inline-block"
               >
                 Book Now
@@ -93,7 +106,7 @@ export default function Services() {
             <div className="text-center">
               <div className="text-3xl font-bold text-forest-green mb-4">$180</div>
               <button 
-                onClick={scrollToContact}
+                onClick={handleBooking}
                 className="bg-forest-green text-white px-6 py-3 rounded-full hover:bg-earth-brown transition-colors inline-block"
               >
                 Join Circle
@@ -145,9 +158,14 @@ export default function Services() {
         <div className="text-center mt-16 fade-in">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-4xl mx-auto">
             <h3 className="font-lora text-2xl font-semibold mb-4">Preparing for Your Journey</h3>
-            <p className="text-lg opacity-90 mb-6">
+            <p className="text-lg opacity-90 mb-4">
               Proper preparation is essential for a safe and transformative Kambo experience. All participants receive detailed preparation guidelines, dietary recommendations, and integration support materials.
             </p>
+            <div className="bg-golden-amber/20 rounded-lg p-4 mb-6">
+              <p className="text-sm font-semibold">
+                <strong>Important:</strong> All ceremony participants must complete a liability waiver before booking. The waiver will open automatically when you click "Book Now" or "Join Circle" above.
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
               <div>
                 <h4 className="font-semibold mb-2">72 Hours Before</h4>
