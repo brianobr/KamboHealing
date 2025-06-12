@@ -1,24 +1,15 @@
 import { User, Users, MessageCircle, Check } from "lucide-react";
 
 export default function Services() {
-  const handleBooking = () => {
-    // Open waiver in new tab first
-    window.open('https://waiver.smartwaiver.com/w/a9cbmzgy6sqiquayahen8n/web/', '_blank');
-    
-    // Then scroll to contact section
-    setTimeout(() => {
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 1000);
-  };
-
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  };
+
+  const openWaiver = () => {
+    window.open('https://waiver.smartwaiver.com/w/a9cbmzgy6sqiquayahen8n/web/', '_blank');
   };
 
   return (
@@ -66,7 +57,7 @@ export default function Services() {
             <div className="text-center">
               <div className="text-3xl font-bold text-forest-green mb-4">$250</div>
               <button 
-                onClick={handleBooking}
+                onClick={scrollToContact}
                 className="bg-forest-green text-white px-6 py-3 rounded-full hover:bg-earth-brown transition-colors inline-block"
               >
                 Book Now
@@ -106,7 +97,7 @@ export default function Services() {
             <div className="text-center">
               <div className="text-3xl font-bold text-forest-green mb-4">$180</div>
               <button 
-                onClick={handleBooking}
+                onClick={scrollToContact}
                 className="bg-forest-green text-white px-6 py-3 rounded-full hover:bg-earth-brown transition-colors inline-block"
               >
                 Join Circle
@@ -161,10 +152,16 @@ export default function Services() {
             <p className="text-lg opacity-90 mb-4">
               Proper preparation is essential for a safe and transformative Kambo experience. All participants receive detailed preparation guidelines, dietary recommendations, and integration support materials.
             </p>
-            <div className="bg-golden-amber/20 rounded-lg p-4 mb-6">
-              <p className="text-sm font-semibold">
-                <strong>Important:</strong> All ceremony participants must complete a liability waiver before booking. The waiver will open automatically when you click "Book Now" or "Join Circle" above.
+            <div className="bg-golden-amber/20 rounded-lg p-6 mb-6">
+              <p className="text-sm font-semibold mb-4">
+                <strong>Important:</strong> All ceremony participants must complete a liability waiver before booking.
               </p>
+              <button 
+                onClick={openWaiver}
+                className="bg-golden-amber text-forest-green px-6 py-3 rounded-full font-semibold hover:bg-warm-tan transition-colors inline-block"
+              >
+                Complete Waiver Form
+              </button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
               <div>

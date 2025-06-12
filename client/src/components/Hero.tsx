@@ -16,19 +16,6 @@ export default function Hero() {
     }
   };
 
-  const handleBooking = () => {
-    // Open waiver in new tab first
-    window.open('https://waiver.smartwaiver.com/w/a9cbmzgy6sqiquayahen8n/web/', '_blank');
-    
-    // Then scroll to contact section
-    setTimeout(() => {
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 1000);
-  };
-
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -65,7 +52,7 @@ export default function Hero() {
             Explore Services
           </button>
           <button 
-            onClick={handleBooking}
+            onClick={scrollToContact}
             className="inline-block border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-forest-green transition-colors"
           >
             Book Your Journey
