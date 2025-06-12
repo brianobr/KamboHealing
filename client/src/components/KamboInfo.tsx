@@ -1,4 +1,6 @@
 import { Dna, Shield, Leaf, Heart, Brain, Eye } from "lucide-react";
+import frogImage from "@assets/Firefly Clloseup of a photorealistic giant monkey leaf frog in a tree in the Amazon 23463_1749575444808.jpg";
+import ceremonyImage from "@assets/Firefly Photorealistic giant monkey leaf frog in an Amazonion Kambo ceremony 91141_1749575444807.jpg";
 
 export default function KamboInfo() {
   return (
@@ -17,7 +19,7 @@ export default function KamboInfo() {
           <div className="fade-in">
             {/* Giant Waxy Monkey Frog (Phyllomedusa bicolor) - the source of Kambo medicine */}
             <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Giant_Waxy_Monkey_Frog.jpg" 
+              src={frogImage} 
               alt="Giant Waxy Monkey Frog (Phyllomedusa bicolor) - source of Kambo medicine" 
               className="rounded-xl shadow-lg w-full h-auto"
             />
@@ -125,7 +127,7 @@ export default function KamboInfo() {
           <div className="fade-in">
             {/* Giant Monkey Frog in ceremonial setting */}
             <img 
-              src="@assets/Firefly Photorealistic giant monkey leaf frog in an Amazonion Kambo ceremony 91141_1749575444807.jpg" 
+              src={ceremonyImage} 
               alt="Giant Monkey Frog in traditional Kambo ceremony setting" 
               className="rounded-xl shadow-lg w-full h-auto"
             />
