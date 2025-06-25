@@ -19,6 +19,7 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
 - **Impact**: Eliminated risk of sensitive file exposure through malicious URL crafting
 - **SEO Fix**: Fixed broken Open Graph image by creating static og-image.jpg in public directory
 - **Social Media**: Open Graph and Twitter Card images now properly display Amazon rainforest hero image
+- **Routing Fix**: Added static file serving middleware for development and production compatibility
 
 ### December 25, 2024
 - **SEO Implementation**: Added comprehensive SEO metadata to client/index.html including:
