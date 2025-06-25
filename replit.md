@@ -17,6 +17,7 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
 - **Critical Security Fix**: Updated Vite from vulnerable 5.4.14 to secure 5.4.19
 - **Vulnerability Patched**: CVE-2025-30208 arbitrary file read vulnerability resolved
 - **Impact**: Eliminated risk of sensitive file exposure through malicious URL crafting
+- **SEO Fix**: Corrected broken Open Graph image URLs to use proper local asset paths
 
 ### December 25, 2024
 - **SEO Implementation**: Added comprehensive SEO metadata to client/index.html including:
