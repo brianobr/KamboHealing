@@ -14,7 +14,7 @@ export default function Services() {
 
   return (
     <section id="services" className="py-20 bg-forest-green text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px:8">
         <div className="text-center mb-16 fade-in">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6">
             Sacred Services

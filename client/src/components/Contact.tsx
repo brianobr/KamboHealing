@@ -51,7 +51,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.message || !formData.agreesToTerms) {
       toast({
         title: "Please fill in all required fields",
@@ -72,9 +72,9 @@ export default function Contact() {
     <section id="contact" className="py-20 bg-forest-green text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 fade-in">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="font-playfair text-4xl md:text-5xl font-bold mb-6">
             Begin Your Healing Journey
-          </h2>
+          </h1>
           <p className="font-lora text-xl max-w-3xl mx-auto opacity-90">
             Ready to experience the transformative power of Kambo? Reach out to schedule your consultation or ceremony.
           </p>
@@ -82,33 +82,33 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="fade-in">
-            <h3 className="font-lora text-2xl font-semibold mb-8">Get In Touch</h3>
+            <h2 className="font-lora text-2xl font-semibold mb-8">Get In Touch</h2>
             <div className="space-y-6">
               <div className="flex items-start">
                 <MapPin className="text-golden-amber text-xl mr-4 mt-1 h-5 w-5" />
                 <div>
-                  <h4 className="font-semibold mb-1">Location</h4>
+                  <h3 className="font-semibold mb-1">Location</h3>
                   <p className="opacity-90">Serving Dallas/North Texas area<br />Private ceremonial space</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <Phone className="text-golden-amber text-xl mr-4 mt-1 h-5 w-5" />
                 <div>
-                  <h4 className="font-semibold mb-1">Phone</h4>
+                  <h3 className="font-semibold mb-1">Phone</h3>
                   <p className="opacity-90">(469) 734-6405</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <Mail className="text-golden-amber text-xl mr-4 mt-1 h-5 w-5" />
                 <div>
-                  <h4 className="font-semibold mb-1">Email</h4>
+                  <h3 className="font-semibold mb-1">Email</h3>
                   <p className="opacity-90">kambocowboy@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <Clock className="text-golden-amber text-xl mr-4 mt-1 h-5 w-5" />
                 <div>
-                  <h4 className="font-semibold mb-1">Response Time</h4>
+                  <h3 className="font-semibold mb-1">Response Time</h3>
                   <p className="opacity-90">Within 24 hours for all inquiries</p>
                 </div>
               </div>
@@ -124,8 +124,8 @@ export default function Contact() {
 
           <div className="fade-in">
             <form onSubmit={handleSubmit} className="bg-white text-dark-olive p-8 rounded-xl shadow-xl">
-              <h3 className="font-lora text-2xl font-semibold text-forest-green mb-6">Send a Message</h3>
-              
+              <h2 className="font-lora text-2xl font-semibold text-forest-green mb-6">Send a Message</h2>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-sm font-semibold mb-2">First Name *</label>
