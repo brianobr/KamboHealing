@@ -2,11 +2,13 @@ import { MailService } from '@sendgrid/mail';
 import type { InsertContactSubmission } from '@shared/schema';
 
 if (!process.env.SENDGRID_API_KEY) {
-  throw new Error("SENDGRID_API_KEY environment variable must be set");
+  console.warn("SENDGRID_API_KEY environment variable not set - email functionality disabled");
 }
 
 const mailService = new MailService();
-mailService.setApiKey(process.env.SENDGRID_API_KEY);
+if (process.env.SENDGRID_API_KEY) {
+  mailService.setApiKey(process.env.SENDGRID_API_KEY);
+}
 
 interface EmailParams {
   to: string;
@@ -20,7 +22,12 @@ export async function sendEmail(params: EmailParams): Promise<boolean> {
   try {
     const apiKey = process.env.SENDGRID_API_KEY;
     if (!apiKey) {
-      console.error('SendGrid API key not found');
+      console.error('SendGrid API key not found - email not sent');
+      return false;
+    }
+    
+    if (!apiKey.startsWith('SG.')) {
+      console.error('Invalid SendGrid API key format - must start with "SG."');
       return false;
     }
     
@@ -31,6 +38,7 @@ export async function sendEmail(params: EmailParams): Promise<boolean> {
       text: params.text || '',
       html: params.html || '',
     });
+    console.log('Email sent successfully to:', params.to);
     return true;
   } catch (error) {
     console.error('SendGrid email error:', error);
