@@ -1,5 +1,0 @@
-# This workflow file has been disabled and replaced by main_app-kambohealing.yml
-# The simple workflow was causing build failures due to missing devDependencies
-# All functionality has been merged into the main workflow file
-
-# To completely remove this file, delete it manually from the repository
