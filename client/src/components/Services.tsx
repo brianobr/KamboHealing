@@ -55,7 +55,7 @@ export default function Services() {
               </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-forest-green mb-4">$250</div>
+              <div className="text-3xl font-bold text-forest-green mb-4">$150</div>
               <button 
                 onClick={scrollToContact}
                 className="bg-forest-green text-white px-6 py-3 rounded-full hover:bg-earth-brown transition-colors inline-block"
@@ -95,7 +95,8 @@ export default function Services() {
               </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-forest-green mb-4">$180</div>
+              <div className="text-3xl font-bold text-forest-green mb-4">$130</div>
+              <p className="text-sm text-earth-brown mb-4">per person</p>
               <button 
                 onClick={scrollToContact}
                 className="bg-forest-green text-white px-6 py-3 rounded-full hover:bg-earth-brown transition-colors inline-block"
@@ -135,7 +136,7 @@ export default function Services() {
               </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-forest-green mb-4">$75</div>
+              <div className="text-3xl font-bold text-forest-green mb-4">FREE</div>
               <button 
                 onClick={scrollToContact}
                 className="bg-forest-green text-white px-6 py-3 rounded-full hover:bg-earth-brown transition-colors inline-block"
