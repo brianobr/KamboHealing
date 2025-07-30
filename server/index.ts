@@ -1,7 +1,17 @@
 import express, { type Request, Response, NextFunction } from "express";
 import path from "path";
 import { registerRoutes } from "./routes";
-import { setupVite, serveStatic, log } from "./vite";
+
+// Simple logging function
+function log(message: string, source = "express") {
+  const formattedTime = new Date().toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  });
+  console.log(`${formattedTime} [${source}] ${message}`);
+}
 
 const app = express();
 app.use(express.json());
@@ -70,9 +80,18 @@ app.use((req, res, next) => {
   if (app.get("env") === "development") {
     // Serve static files from client/public directory in development
     app.use(express.static(path.resolve(import.meta.dirname, "..", "client", "public")));
+    // Dynamically import vite modules only in development
+    const { setupVite } = await import("./vite.js");
     await setupVite(app, server);
   } else {
-    serveStatic(app);
+    // Production static file serving
+    const distPath = path.resolve(import.meta.dirname, "public");
+    app.use(express.static(distPath));
+    
+    // fall through to index.html if the file doesn't exist
+    app.use("*", (_req, res) => {
+      res.sendFile(path.resolve(distPath, "index.html"));
+    });
   }
 
   // Use Azure's PORT environment variable or fallback to 5000 for local dev
