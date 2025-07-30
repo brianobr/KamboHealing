@@ -13,6 +13,10 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
 
 ## Recent Changes
 
+### January 25, 2025 - Image Update
+- **Matt O'Brien Photo**: Updated practitioner headshot with new professional image
+- **Visual Enhancement**: New photo shows authentic, approachable styling that aligns with Kambo practice aesthetic
+
 ### December 25, 2024 - Security Update
 - **Critical Security Fix**: Updated Vite from vulnerable 5.4.14 to secure 5.4.19
 - **Vulnerability Patched**: CVE-2025-30208 arbitrary file read vulnerability resolved

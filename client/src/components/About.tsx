@@ -1,5 +1,5 @@
 import { CheckCircle } from "lucide-react";
-import mattHeadshot from "@assets/Matt Headshot-Enhanced_1749577277724.png";
+import mattHeadshot from "@assets/Matt_1753848074103.png";
 
 export default function About() {
   return (
