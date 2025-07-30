@@ -1,6 +1,6 @@
 import { Dna, Shield, Leaf, Heart, Brain, Eye } from "lucide-react";
 import frogImage from "@assets/Firefly Clloseup of a photorealistic giant monkey leaf frog in a tree in the Amazon 23463_1749575444808.jpg";
-import ceremonyImage from "@assets/Firefly Photorealistic giant monkey leaf frog in an Amazonion Kambo ceremony 91141_1749575444807.jpg";
+import ceremonyImage from "@assets/KamboGroup_1753848165172.png";
 
 export default function KamboInfo() {
   return (
@@ -128,7 +128,7 @@ export default function KamboInfo() {
             {/* Giant Monkey Frog in ceremonial setting */}
             <img 
               src={ceremonyImage} 
-              alt="Giant Monkey Frog in traditional Kambo ceremony setting" 
+              alt="Matt O'Brien with ceremonial community gathering - honoring traditional healing practices" 
               className="rounded-xl shadow-lg w-full h-auto"
             />
           </div>
