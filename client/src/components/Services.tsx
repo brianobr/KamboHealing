@@ -116,7 +116,7 @@ export default function Services() {
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <Check className="text-golden-amber mr-3 mt-1 h-4 w-4" />
-                <span>60-minute video/phone call</span>
+                <span>Video/phone call</span>
               </div>
               <div className="flex items-start">
                 <Check className="text-golden-amber mr-3 mt-1 h-4 w-4" />
