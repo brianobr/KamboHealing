@@ -3,7 +3,6 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSubmissionSchema } from "@shared/schema";
 import { z } from "zod";
-import { sendContactFormNotification } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Get testimonials
@@ -20,18 +19,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/contact", async (req, res) => {
     try {
       const validatedData = insertContactSubmissionSchema.parse(req.body);
-      
-      // Store the submission
       const submission = await storage.createContactSubmission(validatedData);
-      
-      // Send email notification
-      const emailSent = await sendContactFormNotification(validatedData);
-      
-      if (!emailSent) {
-        console.error("Failed to send email notification for contact form submission");
-        // Still return success to user since their message was stored
-      }
-      
       res.status(201).json({ 
         message: "Thank you for your message! Matt will respond within 24 hours.",
         submission: { id: submission.id }
@@ -43,7 +31,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
           errors: error.errors 
         });
       } else {
-        console.error("Contact form submission error:", error);
         res.status(500).json({ message: "Failed to submit contact form" });
       }
     }
