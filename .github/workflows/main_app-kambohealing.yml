@@ -129,9 +129,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_AC09779AC2134A19916BBE97D1D39EB1 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_6553AB69CFE041F5AEA68E5CBD8293B4 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_85D9EF816BCC4EBEB5B8432E2AD7E464 }}
+          # Staging credentials from main_app-kambohealing(staging).yml
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_A3DA42B7548745E1A4DCDFC967031F44 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_B1DE86A61108430183B33E0E76205A77 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1F2652D6AF8E49F29EF8D9D9F90D2475 }}
+          # Original production credentials (commented out):
+          # client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_AC09779AC2134A19916BBE97D1D39EB1 }}
+          # tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_6553AB69CFE041F5AEA68E5CBD8293B4 }}
+          # subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_85D9EF816BCC4EBEB5B8432E2AD7E464 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
