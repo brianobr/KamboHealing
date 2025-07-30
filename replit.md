@@ -13,6 +13,12 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
 
 ## Recent Changes
 
+### January 25, 2025 - Email Integration & Deployment Updates
+- **SendGrid Integration**: Added email notifications for contact form submissions with secure API key handling
+- **Professional Email Templates**: HTML email templates with brand styling sent to kambocowboy@gmail.com
+- **Staging Deployment**: Updated Azure deployment workflow to target staging environment (app-kambohealing-staging.azurewebsites.net)
+- **Pricing Updates**: Reduced individual sessions to $150, group sessions to $130/person, free consultations
+
 ### January 25, 2025 - Image Updates
 - **Matt O'Brien Photo**: Updated practitioner headshot with new professional image showing authentic styling with hat, vest, and boots
 - **Community Photo**: Added group ceremonial photo to KamboInfo section, replacing AI-generated content with authentic community gathering
