@@ -23,9 +23,9 @@ export async function sendContactFormEmails(formData: ContactFormData): Promise<
   try {
     const { firstName, lastName, email, phone, serviceInterest, message } = formData;
     
-    // Email to Matt
-    const emailToMatt = {
-      to: 'kambocowboy@gmail.com',
+    // Email to recipient
+    const emailToRecipient = {
+      to: process.env.RECIPIENT_EMAIL || 'kambocowboy@gmail.com',
       from: process.env.GMAIL_USER,
       replyTo: email,
       subject: `New Contact Form Submission - ${firstName} ${lastName}`,
@@ -62,7 +62,7 @@ export async function sendContactFormEmails(formData: ContactFormData): Promise<
     const confirmationEmail = {
       to: email,
       from: process.env.GMAIL_USER,
-      replyTo: 'kambocowboy@gmail.com',
+      replyTo: process.env.RECIPIENT_EMAIL || 'kambocowboy@gmail.com',
       subject: 'Thank you for contacting Kambo Healing - We\'ll be in touch soon',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -84,13 +84,13 @@ export async function sendContactFormEmails(formData: ContactFormData): Promise<
           <p>Blessings,<br>
           <strong>Matt O'Brien</strong><br>
           Kambo Practitioner<br>
-          📧 kambocowboy@gmail.com<br>
+          📧 ${process.env.RECIPIENT_EMAIL || 'kambocowboy@gmail.com'}<br>
           📱 469-734-6405</p>
           
           <div style="margin-top: 30px; padding: 15px; background-color: #e8f5e8; border-radius: 8px;">
             <p style="margin: 0; font-size: 14px; color: #555;">
               This is an automated confirmation. Please do not reply to this email. 
-              For questions, contact Matt directly at kambocowboy@gmail.com.
+              For questions, contact Matt directly at ${process.env.RECIPIENT_EMAIL || 'kambocowboy@gmail.com'}.
             </p>
           </div>
         </div>
@@ -99,7 +99,7 @@ export async function sendContactFormEmails(formData: ContactFormData): Promise<
 
     // Send both emails using Gmail SMTP
     await Promise.all([
-      transporter.sendMail(emailToMatt),
+      transporter.sendMail(emailToRecipient),
       transporter.sendMail(confirmationEmail)
     ]);
 
