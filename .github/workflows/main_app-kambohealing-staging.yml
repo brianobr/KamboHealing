@@ -8,6 +8,12 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual deployment'
+        required: false
+        default: 'Manual deployment triggered'
+        type: string
 
 jobs:
   build:
@@ -17,6 +23,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Log deployment reason
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          echo "Manual deployment triggered"
+          echo "Reason: ${{ github.event.inputs.reason }}"
 
       - name: Set up Node.js version
         uses: actions/setup-node@v3
