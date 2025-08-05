@@ -3,7 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSubmissionSchema } from "@shared/schema";
 import { z } from "zod";
-import { sendContactFormEmail } from "./email";
+import { sendContactFormEmails } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Get testimonials
@@ -25,7 +25,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const submission = await storage.createContactSubmission(validatedData);
       
       // Send email notification
-      const emailSent = await sendContactFormEmail(validatedData);
+      const emailSent = await sendContactFormEmails(validatedData);
       
       if (emailSent) {
         res.status(201).json({ 

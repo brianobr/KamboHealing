@@ -1,11 +1,13 @@
-import { MailService } from '@sendgrid/mail';
+import nodemailer from 'nodemailer';
 
-if (!process.env.SENDGRID_API_KEY) {
-  throw new Error("SENDGRID_API_KEY environment variable must be set");
-}
-
-const mailService = new MailService();
-mailService.setApiKey(process.env.SENDGRID_API_KEY);
+// Create Gmail SMTP transporter
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_APP_PASSWORD
+  }
+});
 
 interface ContactFormData {
   firstName: string;
@@ -17,14 +19,15 @@ interface ContactFormData {
   agreesToTerms?: boolean;
 }
 
-export async function sendContactFormEmail(formData: ContactFormData): Promise<boolean> {
+export async function sendContactFormEmails(formData: ContactFormData): Promise<boolean> {
   try {
     const { firstName, lastName, email, phone, serviceInterest, message } = formData;
     
     // Email to Matt
     const emailToMatt = {
       to: 'kambocowboy@gmail.com',
-      from: 'noreply@kambohealing.com', // This should be a verified sender in SendGrid
+      from: process.env.GMAIL_USER,
+      replyTo: email,
       subject: `New Contact Form Submission - ${firstName} ${lastName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -58,7 +61,7 @@ export async function sendContactFormEmail(formData: ContactFormData): Promise<b
     // Confirmation email to the person who submitted the form
     const confirmationEmail = {
       to: email,
-      from: 'noreply@kambohealing.com',
+      from: process.env.GMAIL_USER,
       replyTo: 'kambocowboy@gmail.com',
       subject: 'Thank you for contacting Kambo Healing - We\'ll be in touch soon',
       html: `
@@ -94,15 +97,16 @@ export async function sendContactFormEmail(formData: ContactFormData): Promise<b
       `,
     };
 
-    // Send both emails
+    // Send both emails using Gmail SMTP
     await Promise.all([
-      mailService.send(emailToMatt),
-      mailService.send(confirmationEmail)
+      transporter.sendMail(emailToMatt),
+      transporter.sendMail(confirmationEmail)
     ]);
 
+    console.log('Contact form emails sent successfully via Gmail SMTP');
     return true;
   } catch (error) {
-    console.error('SendGrid email error:', error);
+    console.error('Gmail SMTP email error:', error);
     return false;
   }
 }
