@@ -13,6 +13,13 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
 
 ## Recent Changes
 
+### August 5, 2025 - Azure Deployment Fix
+- **Vite Import Issue**: Resolved "Cannot find package 'vite'" error in Azure production deployment
+- **Production Server**: Created separate `server/production.ts` entry point without vite dependencies for production builds
+- **Build Process**: Modified GitHub Actions workflow to use production-specific server bundle
+- **Manual Deployment**: Enhanced workflow dispatcher with custom reason input and deployment logging
+- **Architecture**: Maintained development/production separation - `index.ts` for dev with vite, `production.ts` for production static serving
+
 ### January 25, 2025 - Image Updates
 - **Matt O'Brien Photo**: Updated practitioner headshot with new professional image showing authentic styling with hat, vest, and boots
 - **Community Photo**: Added group ceremonial photo to KamboInfo section, replacing AI-generated content with authentic community gathering
