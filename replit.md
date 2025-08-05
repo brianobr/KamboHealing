@@ -19,7 +19,7 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
 - **Build Process**: Modified GitHub Actions workflow to use production-specific server bundle
 - **Manual Deployment**: Enhanced workflow dispatcher with custom reason input and deployment logging
 - **Slot Swap Workflow**: Added GitHub Actions workflow for swapping Azure staging and production slots
-  - Manual dispatcher with confirmation requirement ("SWAP" must be typed)
+  - Manual dispatcher with optional reason field
   - Health checks and rollback capabilities
   - Comprehensive logging and verification steps
 - **Email Functionality**: Implemented Gmail SMTP integration for contact form submissions

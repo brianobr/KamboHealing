@@ -3,10 +3,6 @@ name: Swap Azure App Service Slots
 on:
   workflow_dispatch:
     inputs:
-      confirmation:
-        description: 'Type "SWAP" to confirm slot swap from staging to production'
-        required: true
-        type: string
       reason:
         description: 'Reason for slot swap (optional)'
         required: false
@@ -19,14 +15,6 @@ jobs:
     name: Swap Staging and Production Slots
     
     steps:
-    - name: Validate Confirmation
-      run: |
-        if [ "${{ github.event.inputs.confirmation }}" != "SWAP" ]; then
-          echo "❌ Confirmation failed. You must type 'SWAP' to proceed."
-          exit 1
-        fi
-        echo "✅ Confirmation validated"
-        
     - name: Log Swap Details
       run: |
         echo "🔄 Starting slot swap process"
