@@ -74,42 +74,15 @@ app.use((req, res, next) => {
     throw err;
   });
 
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
-  const isDevelopment = process.env.NODE_ENV === "development";
-  log(`Environment: ${process.env.NODE_ENV || 'not set'}, isDevelopment: ${isDevelopment}`);
+  // Production static file serving only
+  const distPath = path.resolve(import.meta.dirname, "public");
+  log(`Setting up production static serving from: ${distPath}`);
+  app.use(express.static(distPath));
   
-  if (isDevelopment) {
-    // Serve static files from client/public directory in development
-    app.use(express.static(path.resolve(import.meta.dirname, "..", "client", "public")));
-    // Dynamically import vite modules only in development
-    try {
-      // Use a more dynamic import that esbuild can't statically analyze
-      const vitePath = "./vite.js";
-      const viteModule = await import(vitePath);
-      await viteModule.setupVite(app, server);
-      log("Vite development server setup complete");
-    } catch (error) {
-      log(`Vite setup failed, falling back to production mode: ${error}`);
-      // Fall back to production static serving if vite import fails
-      const distPath = path.resolve(import.meta.dirname, "public");
-      app.use(express.static(distPath));
-      app.use("*", (_req, res) => {
-        res.sendFile(path.resolve(distPath, "index.html"));
-      });
-    }
-  } else {
-    // Production static file serving
-    const distPath = path.resolve(import.meta.dirname, "public");
-    log(`Setting up production static serving from: ${distPath}`);
-    app.use(express.static(distPath));
-    
-    // fall through to index.html if the file doesn't exist
-    app.use("*", (_req, res) => {
-      res.sendFile(path.resolve(distPath, "index.html"));
-    });
-  }
+  // fall through to index.html if the file doesn't exist
+  app.use("*", (_req, res) => {
+    res.sendFile(path.resolve(distPath, "index.html"));
+  });
 
   // Use Azure's PORT environment variable or fallback to 5000 for local dev
   const port = parseInt(process.env.PORT || "5000", 10);

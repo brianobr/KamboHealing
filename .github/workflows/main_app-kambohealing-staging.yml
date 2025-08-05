@@ -54,8 +54,9 @@ jobs:
 
       - name: Build server application
         run: |
-          # Create dist directory and build server
-          npx esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --minify
+          # Create dist directory and build server using production entry point
+          # This avoids any vite imports that could cause issues in production
+          npx esbuild server/production.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --minify
           
           # Copy client build to expected locations
           mkdir -p dist/public
@@ -71,7 +72,7 @@ jobs:
       - name: Verify build outputs
         run: |
           echo "Build verification:"
-          echo "- Server bundle: $(ls -la dist/index.js 2>/dev/null || echo 'MISSING')"
+          echo "- Server bundle: $(ls -la dist/production.js 2>/dev/null || echo 'MISSING')"
           echo "- Client files: $(ls -la dist/public/index.html 2>/dev/null || echo 'MISSING')"
           echo "- Package files: $(ls -la dist/package.json 2>/dev/null || echo 'MISSING')"
 
@@ -82,7 +83,7 @@ jobs:
           
           # Create a server directory structure that matches what the bundled code expects
           mkdir -p deployment/server
-          cp dist/index.js deployment/server/
+          cp dist/production.js deployment/server/index.js
           
           # Copy client assets to the expected location relative to server
           mkdir -p deployment/server/public
