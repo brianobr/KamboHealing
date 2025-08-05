@@ -38,9 +38,9 @@ jobs:
     - name: Azure Login
       uses: azure/login@v2
       with:
-        client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_8B3B1C8F7D4D4A5E9B8C1E6F2A5D8C9B }}
-        tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1A2B3C4D5E6F7A8B9C0D1E2F3A4B5C6D }}
-        subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_7D8E9F0A1B2C3D4E5F6A7B8C9D0E1F2A }}
+        client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_6F2C19C323474B82956DC1CD50C5D388 }}
+        tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_CDAFE703578D45ABA46274B6E7CDE3D3 }}
+        subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1EE76121ECB44247BA4458D6EB7875CE }}
         
     - name: Swap Slots
       uses: azure/CLI@v1
