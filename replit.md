@@ -68,6 +68,34 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
 - **Styling**: Custom Tailwind configuration with earth-tone color palette
 - **Assets**: Local image storage in attached_assets directory
 
+## Email System Configuration
+
+### Email Flow Architecture
+The contact form implements a dual-email system using Gmail SMTP:
+1. **Notification Email**: Sent to the configured recipient with complete contact details
+2. **Confirmation Email**: Sent to the user with practitioner contact information and thank you message
+
+### Environment-Based Email Routing
+- **Staging Environment**: Emails sent to developer for testing and verification
+- **Production Environment**: Emails sent to Kambo Cowboy (Matt O'Brien) for client inquiries
+- **Configuration**: Controlled via `RECIPIENT_EMAIL` environment variable
+
+### Required Environment Variables
+- `GMAIL_USER`: Gmail address used for SMTP authentication and sending
+- `GMAIL_APP_PASSWORD`: 16-character app-specific password from Google Account settings
+- `RECIPIENT_EMAIL`: Destination email for contact form notifications
+
+### Email Templates
+- Professional HTML templates with Kambo green branding (#2d5016)
+- Mobile-responsive design with clear typography
+- Includes practitioner contact details and reply-to functionality
+- Graceful fallback handling for optional form fields (phone, service interest)
+
+### Production Deployment
+- Nodemailer dependency included in Azure deployment package
+- Environment variables configured in Azure App Service settings
+- Error handling ensures form submissions succeed even if email delivery fails
+
 ## User Preferences
 - Professional aesthetic honoring indigenous wisdom
 - Science-backed approach to traditional medicine
