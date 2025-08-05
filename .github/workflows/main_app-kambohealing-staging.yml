@@ -117,7 +117,8 @@ jobs:
               "zod-validation-error": "^3.4.0",
               "ws": "^8.18.0",
               "@neondatabase/serverless": "^0.10.4",
-              "drizzle-zod": "^0.7.0"
+              "drizzle-zod": "^0.7.0",
+              "nodemailer": "^6.9.9"
             }
           }
           EOF

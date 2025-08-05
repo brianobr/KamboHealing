@@ -27,6 +27,7 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
   - Users receive automatic confirmation emails with Matt's contact details
   - Professional HTML email templates with Kambo branding
   - Switched from SendGrid to Gmail SMTP for reliable email delivery
+  - Fixed Azure deployment by adding nodemailer to production dependencies
 - **Architecture**: Maintained development/production separation - `index.ts` for dev with vite, `production.ts` for production static serving
 
 ### January 25, 2025 - Image Updates
