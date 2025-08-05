@@ -77,15 +77,30 @@ app.use((req, res, next) => {
   // importantly only setup vite in development and after
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes
-  if (app.get("env") === "development") {
+  const isDevelopment = process.env.NODE_ENV === "development";
+  log(`Environment: ${process.env.NODE_ENV || 'not set'}, isDevelopment: ${isDevelopment}`);
+  
+  if (isDevelopment) {
     // Serve static files from client/public directory in development
     app.use(express.static(path.resolve(import.meta.dirname, "..", "client", "public")));
     // Dynamically import vite modules only in development
-    const { setupVite } = await import("./vite.js");
-    await setupVite(app, server);
+    try {
+      const { setupVite } = await import("./vite.js");
+      await setupVite(app, server);
+      log("Vite development server setup complete");
+    } catch (error) {
+      log(`Vite setup failed, falling back to production mode: ${error}`);
+      // Fall back to production static serving if vite import fails
+      const distPath = path.resolve(import.meta.dirname, "public");
+      app.use(express.static(distPath));
+      app.use("*", (_req, res) => {
+        res.sendFile(path.resolve(distPath, "index.html"));
+      });
+    }
   } else {
     // Production static file serving
     const distPath = path.resolve(import.meta.dirname, "public");
+    log(`Setting up production static serving from: ${distPath}`);
     app.use(express.static(distPath));
     
     // fall through to index.html if the file doesn't exist
