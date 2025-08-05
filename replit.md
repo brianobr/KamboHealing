@@ -23,11 +23,12 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
   - Health checks and rollback capabilities
   - Comprehensive logging and verification steps
 - **Email Functionality**: Implemented Gmail SMTP integration for contact form submissions
-  - Contact form now sends email notifications to Matt (kambocowboy@gmail.com)
-  - Users receive automatic confirmation emails with Matt's contact details
+  - Contact form now sends email notifications to configurable recipient address
+  - Users receive automatic confirmation emails with practitioner contact details
   - Professional HTML email templates with Kambo branding
   - Switched from SendGrid to Gmail SMTP for reliable email delivery
   - Fixed Azure deployment by adding nodemailer to production dependencies
+  - Made recipient email address configurable via RECIPIENT_EMAIL environment variable
 - **Architecture**: Maintained development/production separation - `index.ts` for dev with vite, `production.ts` for production static serving
 
 ### January 25, 2025 - Image Updates
