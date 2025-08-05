@@ -13,11 +13,15 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
 
 ## Recent Changes
 
-### August 5, 2025 - Azure Deployment Fix
+### August 5, 2025 - Azure Deployment Fix & Email Integration
 - **Vite Import Issue**: Resolved "Cannot find package 'vite'" error in Azure production deployment
 - **Production Server**: Created separate `server/production.ts` entry point without vite dependencies for production builds
 - **Build Process**: Modified GitHub Actions workflow to use production-specific server bundle
 - **Manual Deployment**: Enhanced workflow dispatcher with custom reason input and deployment logging
+- **Email Functionality**: Implemented SendGrid integration for contact form submissions
+  - Contact form now sends email notifications to Matt (kambocowboy@gmail.com)
+  - Users receive automatic confirmation emails with Matt's contact details
+  - Professional HTML email templates with Kambo branding
 - **Architecture**: Maintained development/production separation - `index.ts` for dev with vite, `production.ts` for production static serving
 
 ### January 25, 2025 - Image Updates

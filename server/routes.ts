@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSubmissionSchema } from "@shared/schema";
 import { z } from "zod";
+import { sendContactFormEmail } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Get testimonials
@@ -19,11 +20,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/contact", async (req, res) => {
     try {
       const validatedData = insertContactSubmissionSchema.parse(req.body);
+      
+      // Store the submission
       const submission = await storage.createContactSubmission(validatedData);
-      res.status(201).json({ 
-        message: "Thank you for your message! Matt will respond within 24 hours.",
-        submission: { id: submission.id }
-      });
+      
+      // Send email notification
+      const emailSent = await sendContactFormEmail(validatedData);
+      
+      if (emailSent) {
+        res.status(201).json({ 
+          message: "Thank you for your message! Matt will respond within 24 hours.",
+          submission: { id: submission.id }
+        });
+      } else {
+        // Still return success to user, but log the email failure
+        console.error('Failed to send contact form email, but submission was saved');
+        res.status(201).json({ 
+          message: "Thank you for your message! Matt will respond within 24 hours.",
+          submission: { id: submission.id }
+        });
+      }
     } catch (error) {
       if (error instanceof z.ZodError) {
         res.status(400).json({ 
@@ -31,6 +47,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           errors: error.errors 
         });
       } else {
+        console.error('Contact form submission error:', error);
         res.status(500).json({ message: "Failed to submit contact form" });
       }
     }
