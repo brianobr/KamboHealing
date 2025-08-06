@@ -152,27 +152,35 @@ export async function registerRoutes(app: Express): Promise<Server> {
   function getFallbackResponse(message: string): string {
     const lowerMessage = message.toLowerCase();
     
+    if (lowerMessage.includes('matt') || lowerMessage.includes('practitioner') || lowerMessage.includes('who is') || lowerMessage.includes('experience') || lowerMessage.includes('background')) {
+      return "Matt O'Brien is a dedicated Kambo practitioner serving the Dallas area. Known as the 'Kambo Cowboy,' Matt combines deep respect for traditional Amazonian wisdom with a modern, safety-first approach. He's committed to authentic healing practices and provides personalized care for each client's unique journey. Contact him at 469-734-6405 or kambocowboy@gmail.com";
+    }
+    
     if (lowerMessage.includes('kambo') || lowerMessage.includes('what is')) {
-      return "Kambo is a traditional Amazonian medicine derived from the waxy secretions of the Phyllomedusa bicolor tree frog. It's used for physical and spiritual cleansing. For detailed information, please contact Matt directly.";
+      return "Kambo is a traditional Amazonian medicine derived from the waxy secretions of the Phyllomedusa bicolor tree frog. Matt works with this sacred medicine to support physical and spiritual cleansing, honoring indigenous traditions while ensuring client safety. Each session is tailored to your individual healing needs.";
     }
     
     if (lowerMessage.includes('session') || lowerMessage.includes('appointment') || lowerMessage.includes('book')) {
-      return "To book a Kambo session, please fill out the contact form below or call Matt at 469-734-6405. He'll discuss your needs and schedule a consultation.";
+      return "Matt offers personalized Kambo sessions in a safe, supportive environment. To book your session, please fill out the contact form below or call him directly at 469-734-6405. He'll discuss your healing goals and ensure Kambo is right for you during a thorough consultation.";
     }
     
     if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('fee')) {
-      return "Pricing varies based on individual needs and session type. Please contact Matt directly to discuss pricing and what's included in your personalized healing journey.";
+      return "Matt believes healing should be accessible and prices sessions fairly based on individual circumstances. Investment varies by session type and personal needs. Contact Matt at 469-734-6405 to discuss pricing and what's included in your complete healing experience.";
     }
     
     if (lowerMessage.includes('safe') || lowerMessage.includes('danger') || lowerMessage.includes('risk')) {
-      return "Safety is Matt's top priority. All sessions include thorough health screening and are conducted with proper protocols. Please discuss any health concerns during your consultation.";
+      return "Safety is Matt's highest priority. As an experienced practitioner, he conducts thorough health screenings, follows strict safety protocols, and creates a supportive environment for your healing journey. He'll discuss your medical history and any concerns during your consultation to ensure Kambo is appropriate for you.";
     }
     
     if (lowerMessage.includes('location') || lowerMessage.includes('where') || lowerMessage.includes('dallas')) {
-      return "Matt practices in the Dallas, Texas area. Exact location details will be provided when you book your session for privacy and safety.";
+      return "Matt serves the Dallas, Texas area with private, comfortable healing spaces. Known throughout North Texas for his authentic approach and dedication to client safety, he provides exact location details when you book your session to maintain privacy and security.";
     }
     
-    return "I'm here to help with questions about Kambo healing. For detailed information and to book a session, please contact Matt directly through the form below or at kambocowboy@gmail.com";
+    if (lowerMessage.includes('benefits') || lowerMessage.includes('help') || lowerMessage.includes('healing')) {
+      return "Matt works with clients seeking physical detoxification, mental clarity, spiritual renewal, and emotional release. Kambo supports the body's natural healing processes and can help with various wellness goals. During your consultation, Matt will discuss how Kambo might support your specific healing intentions.";
+    }
+    
+    return "I'm here to help with questions about Matt's Kambo healing practice. For detailed information about his approach, experience, and to book a session, please contact Matt directly through the form below or at kambocowboy@gmail.com. He's passionate about supporting your healing journey.";
   }
 
   const httpServer = createServer(app);
