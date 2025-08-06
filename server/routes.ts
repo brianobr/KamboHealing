@@ -68,6 +68,94 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const COPILOT_STUDIO_URL = "https://default569ac018c71d4f5098a77a9e9e6765.f9.environment.api.powerplatform.com/copilotstudio/dataverse-backed/authenticated/bots/contoso_kambobot/conversations";
   const API_VERSION = "2022-03-01-preview";
 
+  // Chatbot health check endpoint (using POST to avoid Vite interference)
+  app.post("/api/chatbot/health", async (req, res) => {
+    const healthStatus = {
+      timestamp: new Date().toISOString(),
+      status: "healthy",
+      services: {
+        copilotStudio: { status: "unknown", responseTime: null as number | null, error: null as string | null },
+        fallbackSystem: { status: "healthy", available: true }
+      },
+      endpoint: `${COPILOT_STUDIO_URL}?api-version=${API_VERSION}`,
+      testResults: {
+        connectionTest: false,
+        conversationCreate: false,
+        messageResponse: false
+      }
+    };
+
+    try {
+      // Test 1: Basic connection to Copilot Studio
+      const startTime = Date.now();
+      const testConversationId = uuidv4();
+      
+      const connectionResponse = await fetch(`${COPILOT_STUDIO_URL}?api-version=${API_VERSION}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          conversationId: testConversationId,
+          locale: 'en-US'
+        })
+      });
+
+      const responseTime = Date.now() - startTime;
+      healthStatus.services.copilotStudio.responseTime = responseTime;
+
+      if (connectionResponse.ok) {
+        healthStatus.services.copilotStudio.status = "healthy";
+        healthStatus.testResults.connectionTest = true;
+        healthStatus.testResults.conversationCreate = true;
+
+        // Test 2: Try sending a test message
+        try {
+          const messageResponse = await fetch(`${COPILOT_STUDIO_URL}/${testConversationId}/activities?api-version=${API_VERSION}`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              type: 'message',
+              text: 'health check',
+              from: {
+                id: 'healthcheck',
+                name: 'Health Check'
+              }
+            })
+          });
+
+          if (messageResponse.ok) {
+            healthStatus.testResults.messageResponse = true;
+          }
+        } catch (messageError) {
+          healthStatus.services.copilotStudio.error = `Message test failed: ${messageError instanceof Error ? messageError.message : 'Unknown error'}`;
+        }
+
+      } else {
+        healthStatus.services.copilotStudio.status = "degraded";
+        healthStatus.services.copilotStudio.error = `HTTP ${connectionResponse.status}: ${connectionResponse.statusText}`;
+        healthStatus.status = "degraded";
+      }
+
+    } catch (error) {
+      healthStatus.services.copilotStudio.status = "unhealthy";
+      healthStatus.services.copilotStudio.error = error instanceof Error ? error.message : 'Unknown error';
+      healthStatus.status = "degraded";
+    }
+
+    // Set overall status
+    if (healthStatus.services.copilotStudio.status === "unhealthy") {
+      healthStatus.status = "degraded"; // Still functional with fallbacks
+    }
+
+    const httpStatus = healthStatus.status === "healthy" ? 200 : 
+                      healthStatus.status === "degraded" ? 200 : 503;
+    
+    res.status(httpStatus).json(healthStatus);
+  });
+
   // Start chatbot conversation
   app.post("/api/chatbot/start", async (req, res) => {
     try {
