@@ -157,9 +157,9 @@ export default function Chatbot() {
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsOpen(false)}
-                className="text-white bg-white/10 hover:bg-white/20 border border-white/20 h-8 w-8 p-0 opacity-100"
+                className="text-white bg-white/20 hover:bg-white/30 border border-white/40 hover:border-white/60 h-8 w-8 p-0 shadow-sm"
               >
-                <X className="w-4 h-4 stroke-2" />
+                <X className="w-4 h-4 stroke-2 drop-shadow-sm" />
               </Button>
             </div>
           </CardHeader>
