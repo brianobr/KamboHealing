@@ -16,7 +16,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [useIframeMode, setUseIframeMode] = useState(false);
+  const [useIframeMode, setUseIframeMode] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const conversationId = useRef<string | null>(null);
 
@@ -154,7 +154,12 @@ export default function Chatbot() {
           <CardHeader className="bg-kambo-green text-white p-4 rounded-t-lg">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <CardTitle className="text-lg font-medium">Kambo Healing Assistant</CardTitle>
+                <CardTitle className="text-lg font-medium">
+                  Kambo Healing Assistant
+                  <span className="text-xs font-normal opacity-80 ml-2">
+                    {useIframeMode ? "(Copilot Studio)" : "(Fallback)"}
+                  </span>
+                </CardTitle>
                 <Button
                   variant="ghost"
                   size="sm"
