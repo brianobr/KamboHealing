@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { MessageCircle, X, Send } from "lucide-react";
+import { MessageCircle, X, Send, ExternalLink, Bot } from "lucide-react";
 
 interface Message {
   id: string;
@@ -16,6 +16,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [useIframeMode, setUseIframeMode] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const conversationId = useRef<string | null>(null);
 
@@ -152,7 +153,18 @@ export default function Chatbot() {
         <Card className="fixed bottom-6 right-6 w-96 h-[500px] shadow-2xl z-50 flex flex-col border-kambo-green/20 overflow-hidden">
           <CardHeader className="bg-kambo-green text-white p-4 rounded-t-lg">
             <div className="flex items-center justify-between">
-              <CardTitle className="text-lg font-medium">Kambo Healing Assistant</CardTitle>
+              <div className="flex items-center space-x-2">
+                <CardTitle className="text-lg font-medium">Kambo Healing Assistant</CardTitle>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setUseIframeMode(!useIframeMode)}
+                  className="text-white bg-white/20 hover:bg-white/30 border border-white/40 hover:border-white/60 h-8 w-8 p-0 shadow-sm"
+                  title={useIframeMode ? "Switch to fallback mode" : "Switch to Copilot Studio"}
+                >
+                  {useIframeMode ? <Bot className="w-4 h-4 stroke-2 drop-shadow-sm" /> : <ExternalLink className="w-4 h-4 stroke-2 drop-shadow-sm" />}
+                </Button>
+              </div>
               <Button
                 variant="ghost"
                 size="sm"
@@ -165,8 +177,19 @@ export default function Chatbot() {
           </CardHeader>
           
           <CardContent className="flex-1 flex flex-col p-0">
-            {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-[340px] min-h-0">
+            {useIframeMode ? (
+              <div className="flex-1 min-h-0">
+                <iframe 
+                  src="https://copilotstudio.microsoft.com/environments/Default-569ac018-c71d-4f50-98a7-7a9e9e6765f9/bots/contoso_kambobot/webchat?__version__=2" 
+                  frameBorder="0" 
+                  className="w-full h-full border-0"
+                  title="Kambo Healing Copilot Studio Bot"
+                  allow="microphone"
+                />
+              </div>
+            ) : (
+              <>
+                <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-[340px] min-h-0">
               {messages.map((message) => (
                 <div
                   key={message.id}
@@ -216,7 +239,9 @@ export default function Chatbot() {
                   <Send className="w-4 h-4" />
                 </Button>
               </div>
-            </div>
+                </div>
+              </>
+            )}
           </CardContent>
         </Card>
       )}
