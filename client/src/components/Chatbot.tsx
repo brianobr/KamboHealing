@@ -151,7 +151,7 @@ export default function Chatbot() {
       {/* Chat Window */}
       {isOpen && (
         <Card className="fixed bottom-6 right-6 w-96 h-[500px] shadow-2xl z-50 flex flex-col border-kambo-green/20 overflow-hidden">
-          <CardHeader className="bg-kambo-green p-4 rounded-t-lg">
+          <CardHeader className="p-4 rounded-t-lg" style={{ backgroundColor: '#2d5016' }}>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <CardTitle className="text-lg font-medium text-white">
@@ -203,21 +203,22 @@ export default function Chatbot() {
                   <div
                     className={`max-w-[80%] p-3 rounded-lg ${
                       message.isUser
-                        ? 'bg-kambo-green text-white'
-                        : 'bg-sage-green/10 text-dark-olive border border-sage-green/20'
+                        ? 'text-white border border-white/20'
+                        : 'bg-white text-gray-800 border border-gray-200 shadow-sm'
                     }`}
+                    style={message.isUser ? { backgroundColor: '#2d5016' } : {}}
                   >
-                    <p className="text-sm">{message.text}</p>
+                    <p className="text-sm font-medium">{message.text}</p>
                   </div>
                 </div>
               ))}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="bg-sage-green/10 text-dark-olive border border-sage-green/20 p-3 rounded-lg">
+                  <div className="bg-white text-gray-800 border border-gray-200 shadow-sm p-3 rounded-lg">
                     <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-kambo-green rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-kambo-green rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-                      <div className="w-2 h-2 bg-kambo-green rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                      <div className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: '#2d5016' }}></div>
+                      <div className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: '#2d5016', animationDelay: '0.1s' }}></div>
+                      <div className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: '#2d5016', animationDelay: '0.2s' }}></div>
                     </div>
                   </div>
                 </div>
