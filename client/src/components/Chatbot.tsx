@@ -157,7 +157,7 @@ export default function Chatbot() {
                 <CardTitle className="text-lg font-medium text-white">
                   Kambo Healing Assistant
                   <span className="text-xs font-normal text-white/90 ml-2">
-                    {useIframeMode ? "(Copilot Studio)" : "(Fallback)"}
+                    {useIframeMode ? "(online)" : "(offline)"}
                   </span>
                 </CardTitle>
                 <Button
