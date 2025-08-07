@@ -151,12 +151,12 @@ export default function Chatbot() {
       {/* Chat Window */}
       {isOpen && (
         <Card className="fixed bottom-6 right-6 w-96 h-[500px] shadow-2xl z-50 flex flex-col border-kambo-green/20 overflow-hidden">
-          <CardHeader className="bg-kambo-green text-white p-4 rounded-t-lg">
+          <CardHeader className="bg-kambo-green p-4 rounded-t-lg">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <CardTitle className="text-lg font-medium">
+                <CardTitle className="text-lg font-medium text-white">
                   Kambo Healing Assistant
-                  <span className="text-xs font-normal opacity-80 ml-2">
+                  <span className="text-xs font-normal text-white/90 ml-2">
                     {useIframeMode ? "(Copilot Studio)" : "(Fallback)"}
                   </span>
                 </CardTitle>
@@ -167,7 +167,7 @@ export default function Chatbot() {
                   className="text-white bg-white/20 hover:bg-white/30 border border-white/40 hover:border-white/60 h-8 w-8 p-0 shadow-sm"
                   title={useIframeMode ? "Switch to fallback mode" : "Switch to Copilot Studio"}
                 >
-                  {useIframeMode ? <Bot className="w-4 h-4 stroke-2 drop-shadow-sm" /> : <ExternalLink className="w-4 h-4 stroke-2 drop-shadow-sm" />}
+                  {useIframeMode ? <Bot className="w-4 h-4 stroke-2 drop-shadow-sm text-white fill-white" /> : <ExternalLink className="w-4 h-4 stroke-2 drop-shadow-sm text-white fill-white" />}
                 </Button>
               </div>
               <Button
@@ -176,7 +176,7 @@ export default function Chatbot() {
                 onClick={() => setIsOpen(false)}
                 className="text-white bg-white/20 hover:bg-white/30 border border-white/40 hover:border-white/60 h-8 w-8 p-0 shadow-sm"
               >
-                <X className="w-4 h-4 stroke-2 drop-shadow-sm" />
+                <X className="w-4 h-4 stroke-2 drop-shadow-sm text-white fill-white" />
               </Button>
             </div>
           </CardHeader>
