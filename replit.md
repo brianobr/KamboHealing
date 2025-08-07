@@ -13,6 +13,14 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
 
 ## Recent Changes
 
+### August 7, 2025 - Copilot Studio Integration Success
+- **Iframe Integration**: Successfully implemented direct Copilot Studio bot integration using iframe approach
+- **Dual Mode System**: Created toggle between online (Copilot Studio) and offline (fallback) modes
+- **Visual Improvements**: Fixed all visibility issues with white text on green background (#2d5016)
+- **Status Indicators**: Clear "(online)" and "(offline)" status display in chatbot header
+- **User Experience**: Seamless switching between modes with preserved chat functionality
+- **Health Monitoring**: Maintained existing health check endpoints for monitoring capabilities
+
 ### August 5, 2025 - Azure Deployment Fix & Email Integration
 - **Vite Import Issue**: Resolved "Cannot find package 'vite'" error in Azure production deployment
 - **Production Server**: Created separate `server/production.ts` entry point without vite dependencies for production builds
@@ -67,6 +75,8 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
 - **Shared**: Common schemas and types using Drizzle and Zod
 - **Styling**: Custom Tailwind configuration with earth-tone color palette
 - **Assets**: Local image storage in attached_assets directory
+- **Chatbot System**: Dual-mode integration with Copilot Studio iframe and fallback responses
+- **Health Monitoring**: API endpoints for chatbot connection status monitoring
 
 ## Email System Configuration
 
