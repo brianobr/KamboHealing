@@ -141,10 +141,10 @@ export default function Chatbot() {
       {!isOpen && (
         <Button
           onClick={openChatbot}
-          className="fixed bottom-6 right-6 w-16 h-16 rounded-full bg-kambo-green hover:bg-kambo-green/90 text-white shadow-lg z-50 transition-all duration-300 hover:scale-110"
+          className="fixed bottom-6 right-6 w-18 h-18 rounded-full bg-kambo-green hover:bg-kambo-green/90 text-white shadow-lg z-50 transition-all duration-300 hover:scale-110"
           aria-label="Open chat"
         >
-          <MessageCircle className="w-7 h-7" />
+          <MessageCircle className="w-8 h-8" />
         </Button>
       )}
 
