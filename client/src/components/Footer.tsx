@@ -18,7 +18,7 @@ export default function Footer() {
               <span className="font-playfair text-2xl font-bold">Matt O'Brien</span>
             </div>
             <p className="text-sm opacity-80 mb-4">
-              Certified Kambo Practitioner serving Northern California with sacred Amazonian frog medicine in a safe, trauma-informed container.
+              Certified Kambo Practitioner serving Dallas/North Texas with sacred Amazonian frog medicine in a safe, trauma-informed container.
             </p>
             <div className="flex space-x-4">
               <button className="text-golden-amber hover:text-white transition-colors">
