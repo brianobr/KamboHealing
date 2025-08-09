@@ -7,7 +7,7 @@ on:
   push:
     branches:
       - main              # main branch goes to staging slot
-      - 'dev/**'          # dev branches go to dev slot
+      - dev               # dev branches go to dev slot
   workflow_dispatch:
     inputs:
       reason:
