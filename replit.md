@@ -17,6 +17,7 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
 - **Azure Build Fix**: Resolved missing `dist/production.js` file causing deployment failures
 - **Unified Workflow**: Combined main and dev branch workflows into single workflow with dynamic slot deployment
 - **Smart Deployment**: Main branch deploys to staging slot, dev/* branches deploy to dev slot automatically
+- **Auth Fix**: Resolved Azure federated identity authentication by using simple 'dev' branch name pattern
 - **Missing File Issue**: Fixed GitHub Actions workflow expecting `production.js` but build process creating `index.js`
 - **Build Process**: Uses direct `npx esbuild server/production.ts` command (consistent across branches)
 - **Email Bug Fix**: Corrected confirmation email template to display Matt's correct contact email
