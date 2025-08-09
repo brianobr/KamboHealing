@@ -1,12 +1,13 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - app-kambohealing (dev)
+name: Build and deploy Node.js app to Azure Web App - app-kambohealing
 
 on:
   push:
     branches:
-      - 'dev/**'          # any branch starting with dev/
+      - main              # main branch goes to staging slot
+      - 'dev/**'          # dev branches go to dev slot
   workflow_dispatch:
     inputs:
       reason:
@@ -159,10 +160,21 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_CDAFE703578D45ABA46274B6E7CDE3D3 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1EE76121ECB44247BA4458D6EB7875CE }}
 
-      - name: Deploy to Azure Web App (dev slot)
+      - name: Determine deployment slot
+        id: slot
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            echo "slot=staging" >> $GITHUB_OUTPUT
+            echo "Deploying to staging slot (main branch)"
+          else
+            echo "slot=dev" >> $GITHUB_OUTPUT
+            echo "Deploying to dev slot (dev branch)"
+          fi
+
+      - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'app-kambohealing'
-          slot-name: 'dev'             # <— key change for dev slot
+          slot-name: ${{ steps.slot.outputs.slot }}
           package: .
           startup-command: './startup.sh'
