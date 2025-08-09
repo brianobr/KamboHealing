@@ -84,13 +84,13 @@ export async function sendContactFormEmails(formData: ContactFormData): Promise<
           <p>Blessings,<br>
           <strong>Matt O'Brien</strong><br>
           Kambo Practitioner<br>
-          📧 ${process.env.RECIPIENT_EMAIL || 'kambocowboy@gmail.com'}<br>
+          📧 kambocowboy@gmail.com<br>
           📱 469-734-6405</p>
           
           <div style="margin-top: 30px; padding: 15px; background-color: #e8f5e8; border-radius: 8px;">
             <p style="margin: 0; font-size: 14px; color: #555;">
               This is an automated confirmation. Please do not reply to this email. 
-              For questions, contact Matt directly at ${process.env.RECIPIENT_EMAIL || 'kambocowboy@gmail.com'}.
+              For questions, contact Matt directly at kambocowboy@gmail.com.
             </p>
           </div>
         </div>
