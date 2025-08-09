@@ -15,9 +15,9 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
 
 ### August 9, 2025 - Azure Deployment & Email Fixes
 - **Azure Build Fix**: Resolved missing `dist/production.js` file causing deployment failures
-- **Build Script**: Created `server/build.sh` to properly build production server bundle for Azure deployment
+- **Workflow Sync**: Updated dev branch GitHub Actions workflow to match working main branch approach
 - **Missing File Issue**: Fixed GitHub Actions workflow expecting `production.js` but build process creating `index.js`
-- **Build Process**: Updated build to use `server/production.ts` (without Vite dependencies) for Azure compatibility
+- **Build Process**: Uses direct `npx esbuild server/production.ts` command (consistent across branches)
 - **Email Bug Fix**: Corrected confirmation email template to display Matt's correct contact email
 - **Issue Resolved**: Confirmation emails were incorrectly showing sender's email instead of kambocowboy@gmail.com
 - **Template Update**: Hardcoded Matt's email address in confirmation email signature and footer
