@@ -13,6 +13,12 @@ A comprehensive Kambo practitioner website for Matt O'Brien's authentic healing 
 
 ## Recent Changes
 
+### August 9, 2025 - Email Configuration Fix
+- **Email Bug Fix**: Corrected confirmation email template to display Matt's correct contact email
+- **Issue Resolved**: Confirmation emails were incorrectly showing sender's email instead of kambocowboy@gmail.com
+- **Template Update**: Hardcoded Matt's email address in confirmation email signature and footer
+- **Testing Confirmed**: Email system now properly displays practitioner contact information to clients
+
 ### August 7, 2025 - Copilot Studio Integration Success
 - **Iframe Integration**: Successfully implemented direct Copilot Studio bot integration using iframe approach
 - **Dual Mode System**: Created toggle between online (Copilot Studio) and offline (fallback) modes
