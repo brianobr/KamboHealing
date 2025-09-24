@@ -39,7 +39,7 @@ export default function Services() {
               </div>
               <div className="flex items-start">
                 <Check className="text-golden-amber mr-3 mt-1 h-4 w-4" />
-                <span>3-4 hour ceremonial session</span>
+                <span>1-1.5 hour ceremonial session</span>
               </div>
               <div className="flex items-start">
                 <Check className="text-golden-amber mr-3 mt-1 h-4 w-4" />
@@ -88,10 +88,6 @@ export default function Services() {
               <div className="flex items-start">
                 <Check className="text-golden-amber mr-3 mt-1 h-4 w-4" />
                 <span>Sharing & integration circle</span>
-              </div>
-              <div className="flex items-start">
-                <Check className="text-golden-amber mr-3 mt-1 h-4 w-4" />
-                <span>Light ceremonial meal included</span>
               </div>
             </div>
             <div className="text-center">
